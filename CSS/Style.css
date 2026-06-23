@@ -1,0 +1,406 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=M+PLUS+1p&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+  touch-action: manipulation; /* ダブルタップで拡大されるの防止 */
+
+}
+
+
+body {
+-webkit-text-size-adjust: 100%; /* スマホ画面回転時に文字を拡大させない */
+font-family: "M PLUS 1p", sans-serif;
+font-weight: normal;
+line-height: 1.6;
+letter-spacing: 0.1em;
+text-align: center;
+font-size: 15px;
+color: #888;
+background: #FFFFFF;
+background: linear-gradient(to bottom, #F0FFFF,#F0FFF0); /* 上から下へのグラデーション */
+margin: 0;
+}
+/*backgroundの#add6ffと#FFBAC3を入れ替えると、上部ピンク下部ブルーのグラデーションになります*/
+
+
+h1 {
+font-family: "Josefin Sans", "M PLUS 1p", sans-serif;                               
+font-size: 3.5em;
+font-weight: normal;
+color: #888; 
+text-shadow:
+    3px  3px 0 #fff, /* 右下方向への影 */
+   -3px  3px 0 #fff, /* 左下方向への影 */
+    3px -3px 0 #fff, /* 右上方向への影 */
+   -3px -3px 0 #fff; /* 左上方向への影 */
+}
+
+
+h2 {                           
+font-family: "Josefin Sans", "M PLUS 1p", sans-serif;
+font-size: 2.5em;
+font-weight: normal;
+color: #888;         
+}
+
+h3{                           
+font-family: "Josefin Sans", "M PLUS 1p", sans-serif;
+font-size: 2em;
+font-weight: normal;
+color: #888;         
+}
+
+p {
+color:#888
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px dotted #888;
+	color: #888;
+	
+}
+a:visited {
+  color:silver;
+}
+
+nav {
+margin: 1em auto;  
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+font-size: 1.1em;
+margin-bottom: 0.5em;
+}
+
+footer {
+	padding: 8vh;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.center {
+text-align: center;
+}
+
+.images {
+width: 40vw;
+margin: 80px auto 200px;
+position: relative;
+margin:  auto ;
+}
+.title {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.top{
+	margin: 0 auto 200px;
+	position: relative;
+}
+
+.wrap{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 1.4rem;
+}
+
+.box{
+    position: relative;
+    background: #F3F0EC;
+    box-shadow: 0px 0px 0px 5px #F3F0EC;
+    margin: 5vh;
+    color: #454545;
+}
+.box2{
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 0px 5px #F3F0EC;
+    margin: 10vh;
+    color: #454545;
+	text-align: left;
+	padding: 5vh;
+	font-family:"source-han-serif-jp-variable", sans-serif;
+	font-variation-settings: "wght" 250;;
+}
+.box2 p{
+	padding: 5vh;
+	font-family:"source-han-serif-jp-variable", sans-serif;
+	font-variation-settings: "wght" 250;;
+}
+.box2 h2{
+		font-family:"source-han-serif-jp-variable", sans-serif;
+	font-size: 2.5em;
+	font-variation-settings: "wght" 250;;
+}
+.box2 h3{
+	font-family:"source-han-serif-jp-variable", sans-serif;
+	font-size: 2em;
+	font-variation-settings: "wght" 250;;
+}
+button{
+   position: relative;
+     background-color: transparent; /* 背景を透明に設定 */
+border: none; /* ボーダーも非表示にする場合 */
+  color:#888;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic", Meiryo, sans-serif;
+  padding: 0.25em 0;
+  text-decoration: none;
+}
+
+button:before{
+ position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  top:100%;
+  left: 0;
+  border-radius: 3px;
+  background:#67c5ff;
+  transition: .2s;
+}
+
+
+.chapter{
+    display:block;
+	font-family:"source-han-serif-jp-variable", sans-serif;
+    width:100%;
+    text-align:left;
+    font-size:18px;
+}
+
+.chapter-stories{
+    display:block;
+		font-family:"source-han-serif-jp-variable", sans-serif;
+    width:100%;
+    text-align:left;
+    margin-left:20px;
+}
+
+#episodePage{
+    display:none;
+}
+
+#novel{
+    white-space:pre-wrap;
+    line-height:1.8;
+    margin-top:20px;
+}
+.content{
+  width: 93%;
+  max-width: 600px;
+  font-size: 0.86rem;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic", Meiryo, sans-serif;
+  font-weight: 400;
+  color: #242424;
+  line-height: 2;
+  margin: 0 auto;
+  padding: 2rem 0 3rem 0;
+}
+
+.content p{
+  margin: 0 0 1em 0;
+}
+
+.content a,
+.content a:visited{
+  color: #ffa500;
+}
+
+.content a:active{
+  color: #ffd482;  
+}
+
+@media (hover: hover){
+  .content a{
+    transition: 0.3s;
+  }
+  .content a:hover{
+    color: #ffd482;
+  }
+}
+
+/* ==================================================
+  フォームのデザイン
+================================================== */
+.contactform{
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.contactform span{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 20%;
+  margin: 0 0.4em 1em 0;
+}
+
+.contactform input[type], 
+.contactform textarea{
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.contactform input[type="text"]{
+  display: inline-block;
+  font-size: inherit;
+  width: 70%;
+  height: 2.1em;
+  line-height: 1;
+  vertical-align: super;
+  border: solid 1px #bbb;
+  border-radius: 3px;
+  background: #fff;
+  padding: 0 0.4em;
+}
+
+.contactform input[type="text"]:focus{
+  border: solid 1px #444;
+  box-shadow: 2px 2px 0 rgb(0 0 0  / 0.2) inset;
+}
+
+.contactform input[type="text"]:focus::placeholder{
+  color: transparent;
+}
+
+.contactform label{
+  vertical-align: super;
+  margin: 0 0.4em 0 0;
+  cursor: pointer;
+}
+
+.contactform input[type="radio"]{
+  position: relative;
+  vertical-align: sub;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.3em 0 0;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contactform input[type="radio"]:checked{
+  border: solid 2px #ffa500;
+  background: #fff;
+}
+
+.contactform input[type="radio"]:checked::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  background: #ffa500;
+  border-radius: 50%;
+}
+
+.contactform textarea{
+  display: block;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 450px;
+  height: 8em;
+  border: solid 1px #bbb;
+  border-radius: 3px;
+  background: #fff;
+  margin: 1rem auto;
+  padding: 0.3em 0.4em;
+}
+
+.contactform textarea:focus{
+  border: solid 1px #444;
+  box-shadow: 3px 3px 0 rgb(0 0 0 / 0.2) inset;
+}
+
+.contactform textarea:focus::placeholder{
+  color: transparent;
+}
+
+.contactform input[type="submit"]{
+  display: block;
+  font-size: inherit;
+  font-weight: 700;
+  color: #333;
+  width: 7em;
+  height: 2.5em;
+  line-height: 1;
+  border: solid 1px #888;
+  border-radius: 3em;
+  background: #fff;
+  margin: 0 auto;
+  padding: 0 1em;
+  box-shadow: 0 4px 0 #ccc;
+  cursor: pointer;
+}
+
+@media (hover: hover){
+  .contactform input[type="submit"]{
+    transition: 0.1s;
+  }
+  .contactform input[type="submit"]:hover{
+    border-color: #333;
+    background: #f9f9f9;
+    box-shadow: none;
+  }
+}
+
+.contactform input[type="submit"]:active{
+  border-color: #333;
+  background: #f9f9f9;
+  box-shadow: none;
+}
+
+/* ==================================================
+  拍手機能内ありがとう画面
+================================================== */
+.thankyou{
+  line-height: 3;
+  padding: 2em 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px){
+  .content{
+    padding: 4rem 0 2rem 0;
+    font-size: 0.95rem;
+  }
+
+  .contactform span{
+    width: 25%;
+  }
+
+  .contactform input[type="text"]{
+    width: 55%;
+  }
+
+  .contactform textarea{
+    height: 12em;
+    margin: 2rem auto 2rem auto;
+  }
+}
