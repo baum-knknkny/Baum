@@ -120,6 +120,17 @@ function generateStoryList() {
 }
 
 async function openStory(id) {
+     console.log("開こうとしてる:", id);
+
+    const path =
+        `content/novel-a/${id}.md`;
+
+    console.log("パス:", path);
+
+    const response =
+        await fetch(path);
+
+    console.log(response.status);
     const response =
         await fetch(
             `content/novel-a/${id}.md`
