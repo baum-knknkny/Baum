@@ -51,5 +51,135 @@ const storyList = [
     title:"1-4 力の誇示",
     chapter:1,
     chapterName:"第1章"
+  },{
+    id:"00011",
+    title:"1-5 飛行訓練",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00012",
+    title:"1-6 ハロウィン",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00013",
+    title:"1-7 好きの形",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00014",
+    title:"1-8 血筋",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00015",
+    title:"1-9 クリスマス",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00016",
+    title:"1-10 2人の誕生日",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00017",
+    title:"1-11 クィディッチ",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00018",
+    title:"1-12 バレンタイン",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00019",
+    title:"1-13 未来の2人は",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00020",
+    title:"1-14 1年の終わり",
+    chapter:1,
+    chapterName:"第1章"
+  },{
+    id:"00021",
+    title:"2-1 思わぬ訪問",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00022",
+    title:"2-2 それぞれ信じるもの",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00023",
+    title:"2-3 また始まる",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00024",
+    title:"2-4 居場所",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00025",
+    title:"2-5 静寂の森で",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00026",
+    title:"2-6 探検の意味",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00027",
+    title:"2-7 なりたい自分",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00028",
+    title:"2-8 未知との遭遇",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00029",
+    title:"2-9 大切な人たち",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00030",
+    title:"2-10 新しい友達",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00031",
+    title:"2-11 クリスマスと憂い",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00032",
+    title:"2-12 目標",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00033",
+    title:"2-13 大事なもの",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00034",
+    title:"2-14 また一年が終わる",
+    chapter:2,
+    chapterName:"第2章"
+  },{
+    id:"00035",
+    title:"3-1 加護の思い",
+    chapter:3,
+    chapterName:"第3章"
+  },{
+    id:"00036",
+    title:"3-2 交流と義務",
+    chapter:3,
+    chapterName:"第3章"
   }
 ];
