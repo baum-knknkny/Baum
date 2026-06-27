@@ -125,22 +125,22 @@ transform: translate(-50%,-50%);
     position: relative;
     background: #F3F0EC;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 5vh;
+    margin: 2%;
     color: #454545;
 }
 .box2{
     position: relative;
     background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 10vh;
+    margin: 2%;
     color: #454545;
 	text-align: left;
-	padding: 5vh;
+	padding: 2%;
 	font-family:"source-han-serif-jp-variable", sans-serif;
 	font-variation-settings: "wght" 250;;
 }
 .box2 p{
-	padding: 5vh;
+	padding: 2%;
 	font-family:"source-han-serif-jp-variable", sans-serif;
 	font-variation-settings: "wght" 250;;
 }
