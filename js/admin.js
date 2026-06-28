@@ -52,11 +52,11 @@ function generateMarkdown() {
             .getElementById("series")
             .value;
 
-    if (series === "叶うなら") {
+    if (series === "novel-a") {
 
         return storyListA;
 
-    } else if (series === "白百合のそばで") {
+    } else if (series === "novel-b") {
 
         return storyListB;
 

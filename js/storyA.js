@@ -181,11 +181,7 @@ const storyListA = [
     title:"3-2 交流と義務",
     chapter:3,
     chapterName:"第3章"
-  },{
-    id:"00005",
-    title:"2-13 大事なもの",
-    chapter:2,
-    chapterName:"第2章"
-}
+  }
+
 
 ];
