@@ -56,7 +56,7 @@ function generateStoryList() {
 
     const chapters = {};
 
-    storyList.forEach(story => {
+    storyListA.forEach(story => {
 
         if (!chapters[story.chapter]) {
 
@@ -72,7 +72,7 @@ function generateStoryList() {
     });
 
     const container =
-        document.getElementById("storyList");
+        document.getElementById("storyListA");
 
     container.innerHTML = "";
 

@@ -1,37 +1,38 @@
-function getAFirstName() {
-    return localStorage.getItem("dreamAFirstName")
+function getBFirstName() {
+    return localStorage.getItem("dreamBFirstName")
         || "カエデ";
 }
 
-function getALastName() {
-    return localStorage.getItem("dreamALastName")
+function getBLastName() {
+    return localStorage.getItem("dreamBLastName")
         || "シラサキ";
 }
 
-function saveAFirstName() {
+
+function saveBFirstName() {
 
     const value =
         document
-        .getElementById("AFirstNameInput")
+        .getElementById("BFirstNameInput")
         .value
         .trim();
 
     localStorage.setItem(
-        "dreamAFirstName",
+        "dreamBFirstName",
         value
     );
 }
 
-function saveALastName() {
+function saveBLastName() {
 
     const value =
         document
-        .getElementById("ALastNameInput")
+        .getElementById("BLastNameInput")
         .value
         .trim();
 
     localStorage.setItem(
-        "dreamALastName",
+        "dreamBLastName",
         value
     );
 }
@@ -56,7 +57,7 @@ function generateStoryList() {
 
     const chapters = {};
 
-    storyList.forEach(story => {
+    storyListB.forEach(story => {
 
         if (!chapters[story.chapter]) {
 
@@ -72,7 +73,7 @@ function generateStoryList() {
     });
 
     const container =
-        document.getElementById("storyList");
+        document.getElementById("storyListB");
 
     container.innerHTML = "";
 
@@ -124,7 +125,7 @@ async function openStory(id) {
     console.log("開こうとしてる:", id);
 
     const path =
-        `content/novel-a/${id}.md`;
+        `content/novel-b/${id}.md`;
 
     console.log("パス:", path);
 
@@ -159,11 +160,11 @@ async function openStory(id) {
         content
         .replaceAll(
             "<<ナマエ>>",
-            getAFirstName()
+            getBFirstName()
         )
         .replaceAll(
             "<<ミョウジ>>",
-            getALastName()
+            getBLastName()
         );
 
     document

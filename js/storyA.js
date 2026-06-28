@@ -1,4 +1,4 @@
-const storyList = [
+const storyListA = [
   {
     id:"00001",
     title:"0-1 突然の気づき",

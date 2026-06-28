@@ -44,6 +44,7 @@ function generateMarkdown() {
             .padStart(2, "0");
 
     // 00001形式
+    
     function getStoryList() {
 
     const series =
@@ -53,15 +54,15 @@ function generateMarkdown() {
 
     if (series === "叶うなら") {
 
-        return storyA;
+        return storyListA;
 
     } else if (series === "白百合のそばで") {
 
-        return storyB;
+        return storyListB;
 
     } else {
 
-        return storyShort;
+        return storyListShort;
 
     }
 
