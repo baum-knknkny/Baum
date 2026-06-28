@@ -44,9 +44,30 @@ function generateMarkdown() {
             .padStart(2, "0");
 
     // 00001形式
+function getStoryList() {
 
+    const series =
+        document
+            .getElementById("series")
+            .value;
+
+    if (series === "叶うなら") {
+
+        return storyListA;
+
+    } else if (series === "白百合のそばで") {
+
+        return storyListB;
+
+    } else {
+
+        return storyListShort;
+
+    }
+
+}
     const fileName =
-        String(storyList.length + 1)
+        String(getStoryList().length + 1)
             .padStart(5, "0");
 
     // Markdown生成
