@@ -48,9 +48,65 @@ const storyListB = [
     chapter:1,
     chapterName:"第1章"
 }
-
-
-
+,{
+    id:"00010",
+    title:"1-7 計画の一歩",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00011",
+    title:"1-8 和解",
+    chapter:1,
+    chapterName:"第1章"
+},{
+    id:"00012",
+    title:"1-9 ともに過ごす満月",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00013",
+    title:"1-10 未来の居場所",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00014",
+    title:"1-11 一歩",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00015",
+    title:"1-12 敬意",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00016",
+    title:"1-13 物語の先で",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00017",
+    title:"1-14 変化と安定",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00018",
+    title:"1-15 1年の終わり",
+    chapter:1,
+    chapterName:"第1章"
+}
+,{
+    id:"00019",
+    title:"2-1",
+    chapter:2,
+    chapterName:"第2章"
+}
 
 
 ]
