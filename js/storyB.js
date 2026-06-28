@@ -103,7 +103,7 @@ const storyListB = [
 }
 ,{
     id:"00019",
-    title:"2-1",
+    title:"2-1 陽だまりの中で",
     chapter:2,
     chapterName:"第2章"
 }
