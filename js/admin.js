@@ -46,7 +46,7 @@ function generateMarkdown() {
     // 00001形式
 
     const fileName =
-        String(episode)
+        String(storyList.length + 1)
             .padStart(5, "0");
 
     // Markdown生成
@@ -68,9 +68,7 @@ summary: ${summary}
 ${body}`;
 
     const javascript =
-`
-,
-,{
+`,{
     id:"${fileName}",
     title:"${title}",
     chapter:${chapter},
