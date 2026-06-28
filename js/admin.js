@@ -1,53 +1,94 @@
 function generateMarkdown() {
-function getTitle (title) {
-    const value = document.getItem("title").value.trim();
-    return value;
-}
-function getChapter (chapter) {
-    const value = document.getItem("chapter").value.trim();
-    return value;
-}
-function getChapterName (chapterName) {
-    const value = document.getItem("chapterName").value.trim();
-    return value;
-}
-function getEpisode (episode) {
-    const value = document.getItem("episode").value.trim();
-    return value;
-}
-function getSummary (summary) {
-    const value = document.getItem("summary").value.trim();
-    return value;
-}
-const title = getTitle(1);
-const chapter = getChapter(1);
-const chapterName = getChapterName(1);
-const episode = getEpisode(1);
-const summary = getSummary(1);
-const body = document.getElementById("body").value.trim();
-const today = new Date().toISOString().split("T")[0];
-const markdown = `---
+
+    const chapter =
+        document
+            .getElementById("chapter")
+            .value;
+
+    const chapterName =
+        document
+            .getElementById("chapterName")
+            .value;
+
+    const storyNumber =
+        document
+            .getElementById("storyNumber")
+            .value;
+
+    const title =
+        document
+            .getElementById("title")
+            .value;
+
+     const summary =
+        document
+            .getElementById("summary")
+            .value;
+
+    const body =
+        document
+            .getElementById("body")
+            .value;
+
+    // 今日の日付
+
+    const today = new Date();
+
+    const date =
+        today.getFullYear()
+        + "-"
+        + String(today.getMonth() + 1)
+            .padStart(2, "0")
+        + "-"
+        + String(today.getDate())
+            .padStart(2, "0");
+
+    // 00001形式
+
+    const fileName =
+        String(storyNumber)
+            .padStart(5, "0");
+
+    // Markdown生成
+
+    const markdown =
+`---
 title: ${title}
 
 chapter: ${chapter}
 chapterName: ${chapterName}
 
-episode: ${episode}
+episode: ${storyNumber}
 
-published: ${today}
+published: ${date}
 
 summary: ${summary}
 ---
 
 ${body}`;
 
-function openMarkdown() {
-    document.getElementById("result").value = markdown;
-}
+    document
+        .getElementById("result")
+        .value =
+        markdown;
+
+    document
+        .getElementById("filename")
+        .textContent =
+        `保存ファイル名：${fileName}.md`;
 }
 
 function copyMarkdown() {
-    const result = document.getElementById("result");
+
+    const result =
+        document
+            .getElementById("result");
+
     result.select();
-    document.execCommand("copy");
+
+    navigator.clipboard.writeText(
+        result.value
+    );
+
+    alert("コピーしました！");
 }
