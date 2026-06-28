@@ -8,6 +8,7 @@ function getShortLastName() {
         || "ローレル";
 }
 
+
 function saveShortFirstName() {
 
     const value =
@@ -124,7 +125,7 @@ async function openStory(id) {
     console.log("開こうとしてる:", id);
 
     const path =
-        `content/novel-short/${id}.md`;
+        `content/novel-b/${id}.md`;
 
     console.log("パス:", path);
 
