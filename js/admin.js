@@ -19,4 +19,14 @@ summary: ${summary}
 ---
 
 ${body}`;
+
+function openMarkdown() {
+    document.getElementById("result").value = markdown;
+}
+}
+
+function copyMarkdown() {
+    const result = document.getElementById("result");
+    result.select();
+    document.execCommand("copy");
 }
