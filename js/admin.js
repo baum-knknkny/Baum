@@ -106,6 +106,17 @@ function copyMarkdown() {
     navigator.clipboard.writeText(
         result.value
     );
+}
 
-    alert("コピーしました！");
+function copyJs() {
+
+    const result =
+        document
+            .getElementById("resultJs");
+
+    result.select();
+
+    navigator.clipboard.writeText(
+        result.value
+    );
 }
