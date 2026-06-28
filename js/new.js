@@ -41,7 +41,7 @@ async function generateUpdates() {
         `
         <div class="updateBox">
 
-            <h2>${title}</h2>
+            <h3>${title}</h3>
 
             <hr>
 
