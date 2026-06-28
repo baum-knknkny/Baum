@@ -67,10 +67,27 @@ summary: ${summary}
 
 ${body}`;
 
+    const javascript =
+`
+,
+,{
+    id:"${fileName}",
+    title:"${title}",
+    chapter:${chapter},
+    chapterName:"${chapterName}"
+}
+`;
+
+
     document
         .getElementById("result")
         .value =
         markdown;
+
+    document
+        .getElementById("resultJs")
+        .value =
+        javascript;
 
     document
         .getElementById("filename")
