@@ -16,5 +16,11 @@ const storyList = [
     title:"0-3 焦燥感",
     chapter:0,
     chapterName:"序章"
-  }
+  },{
+    id:"00004",
+    title:"1-1 出会いと対立",
+    chapter:1,
+    chapterName:"第1章"
+}
+
 ]
