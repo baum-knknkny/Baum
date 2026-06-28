@@ -1,11 +1,11 @@
 function getShortFirstName() {
     return localStorage.getItem("dreamShortFirstName")
-        || "カエデ";
+        || "アリス";
 }
 
 function getShortLastName() {
     return localStorage.getItem("dreamShortLastName")
-        || "シラサキ";
+        || "ローレル";
 }
 
 
