@@ -163,6 +163,12 @@ font-style: normal;
 	font-size: 1.5em;
 	font-variation-settings: "wght" 250;;
 }
+
+.box2 #storyTitle{
+  border-left: solid 5px #8db6b6;
+  border-bottom: solid 1px #8db6b6;
+}
+
 button{
    position: relative;
      background-color: transparent; /* 背景を透明に設定 */
@@ -182,7 +188,7 @@ button:before{
   top:100%;
   left: 0;
   border-radius: 3px;
-  background:#67c5ff;
+  background:#8db6b6;
   transition: .2s;
 }
 
@@ -212,6 +218,8 @@ button:before{
     line-height:1.8;
     margin-top:20px;
 }
+
+
 .content{
   width: 93%;
   max-width: 600px;
