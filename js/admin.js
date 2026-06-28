@@ -10,9 +10,9 @@ function generateMarkdown() {
             .getElementById("chapterName")
             .value;
 
-    const storyNumber =
+    const episode =
         document
-            .getElementById("storyNumber")
+            .getElementById("episode")
             .value;
 
     const title =
@@ -46,7 +46,7 @@ function generateMarkdown() {
     // 00001形式
 
     const fileName =
-        String(storyNumber)
+        String(episode)
             .padStart(5, "0");
 
     // Markdown生成
@@ -58,7 +58,7 @@ title: ${title}
 chapter: ${chapter}
 chapterName: ${chapterName}
 
-episode: ${storyNumber}
+episode: ${episode}
 
 published: ${date}
 
