@@ -1,3 +1,4 @@
+function generateMarkdown() {
 const markdown = `---
 title: ${title}
 
@@ -12,3 +13,4 @@ summary: ${summary}
 ---
 
 ${body}`;
+}
