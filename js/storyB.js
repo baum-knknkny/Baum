@@ -21,6 +21,36 @@ const storyListB = [
     title:"1-1 出会いと対立",
     chapter:1,
     chapterName:"第1章"
+},{
+    id:"00005",
+    title:"1-2 組分け帽子",
+    chapter:1,
+    chapterName:"第1章"
+},{
+    id:"00006",
+    title:"1-2 組分け帽子",
+    chapter:1,
+    chapterName:"第1章"
+},{
+    id:"00007",
+    title:"1-4 守るべきもの",
+    chapter:1,
+    chapterName:"第1章"
+},{
+    id:"00008",
+    title:"1-5 信頼と友情",
+    chapter:1,
+    chapterName:"第1章"
 }
+,{
+    id:"00009",
+    title:"1-6 自分への懐疑",
+    chapter:1,
+    chapterName:"第1章"
+}
+
+
+
+
 
 ]
