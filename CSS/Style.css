@@ -16,8 +16,9 @@ html{
 
 body {
 -webkit-text-size-adjust: 100%; /* スマホ画面回転時に文字を拡大させない */
-font-family: "M PLUS 1p", sans-serif;
-font-weight: normal;
+font-family: "ryo-display-plusn", serif;
+font-weight: 500;
+font-style: normal;
 line-height: 1.6;
 letter-spacing: 0.1em;
 text-align: center;
@@ -132,25 +133,33 @@ transform: translate(-50%,-50%);
     position: relative;
     background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 5%;
+    margin: 8%;
     color: #454545;
 	text-align: left;
 	padding: 2%;
-	font-family:"source-han-serif-jp-variable", sans-serif;
-	font-variation-settings: "wght" 250;;
+	font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 .box2 p{
 	padding: 2%;
-	font-family:"source-han-serif-jp-variable", sans-serif;
-	font-variation-settings: "wght" 250;;
+ font-family: "ryo-display-plusn", serif;
+ font-weight: 500;
+ font-style: normal;
 }
 .box2 h2{
-		font-family:"source-han-serif-jp-variable", sans-serif;
-	font-size: 2em;
+font-family: "ryo-display-plusn", serif;
+font-weight: 500;
+font-style: normal;
+	padding: 2%;
+    font-size: 2em;
 	font-variation-settings: "wght" 250;;
 }
 .box2 h3{
-	font-family:"source-han-serif-jp-variable", sans-serif;
+	font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 2%;
 	font-size: 1.5em;
 	font-variation-settings: "wght" 250;;
 }
