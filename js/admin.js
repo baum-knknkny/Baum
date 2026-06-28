@@ -65,7 +65,7 @@ function generateMarkdown() {
 
     }
 
-    }
+    };
     const fileName =
         String(getStoryList().length + 1)
             .padStart(5, "0");
