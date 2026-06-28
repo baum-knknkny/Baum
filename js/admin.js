@@ -1,8 +1,14 @@
 const markdown = `---
 title: ${title}
+
 chapter: ${chapter}
 chapterName: ${chapterName}
-date: ${today}
+
+episode: ${episode}
+
+published: ${today}
+
+summary: ${summary}
 ---
 
 ${body}`;
