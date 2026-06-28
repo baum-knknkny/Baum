@@ -1,4 +1,10 @@
 function generateMarkdown() {
+const title = document.getElementById("title").value;
+const chapter = document.getElementById("chapter").value;
+const chapterName = document.getElementById("chapterName").value;
+const episode = document.getElementById("episode").value;
+const summary = document.getElementById("summary").value;
+const body = document.getElementById("body").value;
 const markdown = `---
 title: ${title}
 
