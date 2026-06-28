@@ -44,7 +44,7 @@ function generateMarkdown() {
             .padStart(2, "0");
 
     // 00001形式
-function getStoryList() {
+    function getStoryList() {
 
     const series =
         document
@@ -53,19 +53,19 @@ function getStoryList() {
 
     if (series === "叶うなら") {
 
-        return storyListA;
+        return storyA;
 
     } else if (series === "白百合のそばで") {
 
-        return storyListB;
+        return storyB;
 
     } else {
 
-        return storyListShort;
+        return storyShort;
 
     }
 
-}
+    }
     const fileName =
         String(getStoryList().length + 1)
             .padStart(5, "0");
