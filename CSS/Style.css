@@ -168,7 +168,34 @@ font-style: normal;
   border-left: solid 5px #8db6b6;
   border-bottom: solid 1px #8db6b6;
 }
+.updateBox {
 
+    border: solid 1px #ccc;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+.updateBox h3 {
+
+    margin: 0;
+
+}
+
+.updateDate {
+
+    text-align: right;
+
+    margin-top: 20px;
+
+    color: gray;
+
+    font-size: 0.9rem;
+}
 button{
    position: relative;
      background-color: transparent; /* 背景を透明に設定 */
