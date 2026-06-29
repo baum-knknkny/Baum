@@ -231,9 +231,8 @@ button:before{
   transition: .2s;
 }
 
-.is-clicked {
-    background-color: #3b82f6; /* 青色に変更 */
-    color: white;
+ .color-button.is-clicked  {
+    color: silver;
   }
 
 
