@@ -7,7 +7,7 @@ async function sendMessage() {
         .trim;
 
     await sendToDiscord(message);
-    showRandomClap();
+    await howRandomClap();
     
 }
 
@@ -57,21 +57,31 @@ document
     }
 
 async function sendToDiscord(message) {
+
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            message: message,
-            page: location.pathname
-        })
-    })
-    if (message === "") {
-        // "👏"
-    } else {
-        // "💌"
-    }
+        {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type":
+                    "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                message,
+
+                page:
+                    document.title
+
+            })
+
+        }
+
+    );
+
 }
