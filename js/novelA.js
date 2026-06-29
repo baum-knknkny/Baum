@@ -86,7 +86,7 @@ function generateStoryList() {
         chapter.stories.forEach(story => {
 
             storyButtons += `
-                <button
+                <button class="color-button" 
                     onclick="openStory('${story.id}')"
                 >
                     ${story.title}
@@ -181,6 +181,9 @@ async function openStory(id) {
         .style.display =
         "block";
 }
+    function changeColor(button) {
+      button.classList.add('is-clicked');
+    }
 
 function backToList() {
 
@@ -197,6 +200,3 @@ function backToList() {
 
 generateStoryList();
 
-    function changeColor(button) {
-      button.classList.add('is-clicked');
-    }
