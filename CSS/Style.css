@@ -171,7 +171,8 @@ font-style: normal;
 .updateBox {
 background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 2%;
+    margin: 10%;
+	padding: 2%;
     color: #454545;
 	text-align: left;
 	font-family: "ryo-display-plusn", serif;
@@ -200,7 +201,7 @@ font-family: "ryo-display-plusn", serif;
 .updateDate {
 
     text-align: right;
-
+padding: 2%;
     margin: 8%;
 
     color: gray;
