@@ -171,8 +171,8 @@ font-style: normal;
 .updateBox {
 background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 10%;
-	padding: 2%;
+    margin: 30%;
+	padding: 5%;
     color: #454545;
 	text-align: left;
 	font-family: "ryo-display-plusn", serif;
@@ -187,7 +187,7 @@ background: #fff;
 font-family: "ryo-display-plusn", serif;
   font-weight: 500;
   font-style: normal;
-  padding: 2%;
+  margin: 2%;
 	font-size: 1.5em;
 	font-variation-settings: "wght" 250;;
 
@@ -201,8 +201,7 @@ font-family: "ryo-display-plusn", serif;
 .updateDate {
 
     text-align: right;
-padding: 2%;
-    margin: 8%;
+    margin-top: 10px;
 
     color: gray;
 
@@ -230,6 +229,11 @@ button:before{
   background:#8db6b6;
   transition: .2s;
 }
+
+button:visited {
+  color:silver;
+}
+
 
 
 .chapter{
