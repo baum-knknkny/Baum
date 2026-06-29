@@ -171,7 +171,7 @@ font-style: normal;
 .updateBox {
 background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-	width: 60%;
+	width: 80%;
     margin-top: 30px;
 	padding: 5%;
     color: #454545;
@@ -231,9 +231,10 @@ button:before{
   transition: .2s;
 }
 
-button:visited {
-  color:silver;
-}
+.is-clicked button {
+    background-color: #3b82f6; /* 青色に変更 */
+    color: white;
+  }
 
 
 
