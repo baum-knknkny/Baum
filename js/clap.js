@@ -85,5 +85,3 @@ async function sendToDiscord(message) {
     );
 
 }
-
-showRandomClap()
