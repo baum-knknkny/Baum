@@ -171,14 +171,14 @@ font-style: normal;
 .updateBox {
 background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
-    
+    margin: 2%;
     color: #454545;
 	text-align: left;
 	font-family: "ryo-display-plusn", serif;
   font-weight: 500;
   font-style: normal;
     border: solid 1px #ccc;
-    margin: 5vh;
+    
 
 }
 
@@ -189,7 +189,6 @@ font-family: "ryo-display-plusn", serif;
   padding: 2%;
 	font-size: 1.5em;
 	font-variation-settings: "wght" 250;;
-    margin: 0;
 
 }
 .updateBox hr {
@@ -202,7 +201,7 @@ font-family: "ryo-display-plusn", serif;
 
     text-align: right;
 
-    margin-top: 20px;
+    margin: 8%;
 
     color: gray;
 
