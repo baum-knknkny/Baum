@@ -178,14 +178,19 @@ background: #fff;
   font-weight: 500;
   font-style: normal;
     border: solid 1px #ccc;
-    padding: 20px;
+    padding: 5%;
 
-    margin-bottom: 20px;
+    margin-bottom: 20%;
 
 }
 
 .updateBox h3 {
-
+font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 2%;
+	font-size: 1.5em;
+	font-variation-settings: "wght" 250;;
     margin: 0;
 
 }
