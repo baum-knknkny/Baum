@@ -181,9 +181,6 @@ async function openStory(id) {
         .style.display =
         "block";
 }
-    function changeColor(button) {
-      button.classList.add('is-clicked');
-    }
 
 function backToList() {
 
