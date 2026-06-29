@@ -231,9 +231,6 @@ button:before{
   transition: .2s;
 }
 
- .color-button.is-clicked  {
-    color: silver;
-  }
 
 
 
