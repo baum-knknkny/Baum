@@ -196,3 +196,7 @@ function backToList() {
 }
 
 generateStoryList();
+
+    function changeColor(button) {
+      button.classList.add('is-clicked');
+    }
