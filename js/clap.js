@@ -7,7 +7,7 @@ async function sendMessage() {
         .trim;
 
     await sendToDiscord(message);
-    await howRandomClap();
+    await showRandomClap();
     
 }
 
