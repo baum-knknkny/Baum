@@ -6,10 +6,9 @@ async function sendMessage() {
         .value
         .trim;
 
-    function getCategory() {
         const category = 
-            "拍手";
-    };
+            value("拍手");
+    
 
     await sendToDiscord(
         category,
