@@ -7,7 +7,7 @@ async function sendMessage() {
 
     const name =
         document
-            getElementById("name")
+            .getElementById("name")
             .value;
 
     const message =

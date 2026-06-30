@@ -7,7 +7,9 @@ async function sendMessage() {
         .trim;
 
         const category = 
-            value("拍手");
+            document.value;
+
+            value = "拍手"
     
 
     await sendToDiscord(
