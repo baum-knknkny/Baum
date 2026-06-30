@@ -6,7 +6,12 @@ async function sendMessage() {
         .value
         .trim;
 
-    await sendToDiscord(message);
+    const category = "拍手";
+
+    await sendToDiscord(
+        category,
+        message
+    );
     await showRandomClap();
     
 }
