@@ -1,11 +1,5 @@
 async function sendMessage() {
 
-    const message =
-        document
-        .getElementById("message")
-        .value
-        .trim;
-
         const category = 
             document.value1;
 
@@ -15,6 +9,12 @@ async function sendMessage() {
             document.value2;
             
             const value2 = "";
+            
+    const message =
+        document
+        .getElementById("message")
+        .value
+        .trim;
     
 
     await sendToDiscord(
