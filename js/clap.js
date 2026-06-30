@@ -17,11 +17,15 @@ async function sendMessage() {
         .trim;
     
 
-    await sendToDiscord(
-        category,
-        name,
-        message
-    );
+    await sendToDiscord({
+
+    category,
+
+    name,
+
+    message
+
+});
     await showRandomClap();
     
 }
