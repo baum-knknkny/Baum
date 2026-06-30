@@ -56,14 +56,7 @@ async function sendToDiscord(data) {
 
             },
 
-            body: JSON.stringify({
-
-                message,
-
-                page:
-                    document.title
-
-            })
+            body: JSON.stringify(data)
 
         }
 
