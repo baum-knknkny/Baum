@@ -7,13 +7,19 @@ async function sendMessage() {
         .trim;
 
         const category = 
-            document.value;
+            document.value1;
 
-            value = "拍手"
+        const value1 = "拍手";
+            
+        const name =
+            document.value2;
+            
+            const value2 = "";
     
 
     await sendToDiscord(
         category,
+        name,
         message
     );
     await showRandomClap();
