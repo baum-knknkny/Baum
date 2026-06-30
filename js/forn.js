@@ -40,3 +40,33 @@ async function sendMessage() {
     alert("送信しました");
 
 }
+
+async function sendToDiscord(message) {
+
+    await fetch(
+        "https://clap.hutuuneko-mukiryoku.workers.dev",
+        {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type":
+                    "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                message,
+
+                page:
+                    document.title
+
+            })
+
+        }
+
+    );
+
+}
