@@ -1,3 +1,3 @@
-const resList {
+const resList = [
 "00001"
-}
+]
