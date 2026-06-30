@@ -41,7 +41,7 @@ async function sendMessage() {
 
 }
 
-async function sendToDiscord(message) {
+async function sendToDiscord(data) {
 
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
