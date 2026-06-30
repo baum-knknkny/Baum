@@ -23,11 +23,15 @@ async function sendMessage() {
 
     }
 
-    await sendToDiscord(
-        category,
-        name,
-        message
-    );
+    await sendToDiscord({
+
+    category,
+
+    name,
+
+    message
+
+});
 
     document
     .getElementById("category")
