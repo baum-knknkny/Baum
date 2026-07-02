@@ -9,7 +9,6 @@ async function generateUpdates() {
         [...newList].reverse();
 
     for (const id of updates) {
- (const item of updates) {
     const response = await fetch(
         `content/new/${item.id}.md`   // プロパティを明示
     );
@@ -32,7 +31,7 @@ async function generateUpdates() {
         </div>
     `;
 
-    }}
+    }
 
 }
 
