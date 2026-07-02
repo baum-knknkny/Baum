@@ -38,11 +38,10 @@ window.onload = async () => {
     await increaseVisitor();
 
 };
-
-const lastUpdate =
-    newList[0].date;
-
 document
-    .getElementById("lastUpdate")
-    .textContent =
-    lastUpdate;
+
+.getElementById("lastUpdate")
+
+.textContent =
+
+updateList[0].date;
