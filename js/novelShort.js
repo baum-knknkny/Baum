@@ -269,5 +269,31 @@ function backToList() {
         .style.display =
         "block";
 }
+async function addLike(){
 
+    const data =
+        await addCounter(
+            "like",
+            novelName,
+            currentStoryId
+        );
+
+    document
+        .getElementById("likeCount")
+        .textContent =
+        data.count;
+
+    document
+    .getElementById("likeButton")
+    .textContent =
+    "♥ 応援ありがとう！";
+
+    setTimeout(() => {
+
+    document
+        .getElementById("likeButton")
+        .textContent =
+        "♡ 応援する";
+
+},1000);}
 generateStoryList();

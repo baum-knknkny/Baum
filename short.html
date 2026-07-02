@@ -53,7 +53,22 @@
         <h3 id="storyTitle"></h3>
         <div id="novel"></div>
 <br><br>
-        <div class="center"><button
+        <div class="center">
+          
+                <div class="like-area">
+
+    <button
+        id="likeButton"
+        onclick="addLike()">
+        ♡ 応援する
+    </button>
+
+    <span id="likeCount">
+        0
+    </span>
+
+</div>
+<button
         id="prevButton"
         onclick="openPrevStory()">
         ←
@@ -73,6 +88,7 @@
 
 </div>
     </div>
+    <script src="js/common/count.js"></script>
 
     <script src="js/content/storyShort.js"></script>
     <script src="js/novelShort.js"></script>
