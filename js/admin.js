@@ -17,7 +17,7 @@ async function saveTest(){
 
             body:JSON.stringify({
 
-                path:"test.txt",
+                path:"test2.txt",
 
                 content:"Hello Baum!!"
 
