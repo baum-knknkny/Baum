@@ -52,48 +52,4 @@ async function addCounter(type, novel = "", story = "") {
 
     return await response.json();
 
-}async function loadLike(){
-
-    const data =
-        await getCounter(
-            "like",
-            novelName,
-            currentStoryId
-        );
-
-    document
-        .getElementById("likeCount")
-        .textContent =
-        data.count;
-
-}
-
-async function addLike(){
-
-    const data =
-        await addCounter(
-            "like",
-            novelName,
-            currentStoryId
-        );
-
-    document
-        .getElementById("likeCount")
-        .textContent =
-        data.count;
-
-    document
-    .getElementById("likeButton")
-    .textContent =
-    "♥ 応援ありがとう！";
-
-    setTimeout(() => {
-
-    document
-        .getElementById("likeButton")
-        .textContent =
-        "♡ 応援する";
-
-},1000);
-
 }

@@ -275,7 +275,7 @@ function backToList() {
         "block";
 }
 
-async function loadLike() {
+async function loadLike(){
 
     const data =
         await getCounter(
@@ -290,5 +290,33 @@ async function loadLike() {
         data.count;
 
 }
+
+async function addLike(){
+
+    const data =
+        await addCounter(
+            "like",
+            novelName,
+            currentStoryId
+        );
+
+    document
+        .getElementById("likeCount")
+        .textContent =
+        data.count;
+
+    document
+    .getElementById("likeButton")
+    .textContent =
+    "♥ 応援ありがとう！";
+
+    setTimeout(() => {
+
+    document
+        .getElementById("likeButton")
+        .textContent =
+        "♡ 応援する";
+
+},1000);}
 
 generateStoryList();
