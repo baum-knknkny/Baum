@@ -324,6 +324,12 @@ button:before{
 }
 
 
+#clapStory{
+    white-space:pre-wrap;
+    line-height:1.8;
+    margin-top:20px;
+}
+
 .content{
   width: 93%;
   max-width: 600px;
