@@ -1,3 +1,36 @@
+async function saveTest(){
+
+    await fetch(
+
+        "https://editor-worker.○○○.workers.dev",
+
+        {
+
+            method:"POST",
+
+            headers:{
+
+                "Content-Type":
+                    "application/json"
+
+            },
+
+            body:JSON.stringify({
+
+                path:"test.txt",
+
+                content:"Hello Baum!!"
+
+            })
+
+        }
+
+    );
+
+    alert("送信しました！");
+
+}
+
 function generateMarkdown() {
 
     const chapter =
