@@ -55,16 +55,16 @@ document
     .getElementById("clapTitle")
     .textContent =
     title;
-
+document
+        .getElementById("clapStory")
+        .textContent =
+        content;
 document
         .getElementById("clapArea")
         .style.display =
-        "none";
-
-    document
-        .getElementById("clapStory")
-        .style.display =
         "block";
+
+    
 }
 
 async function sendToDiscord(data) {
