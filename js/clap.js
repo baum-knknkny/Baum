@@ -1,20 +1,13 @@
 async function sendMessage() {
 
-        const category = 
-            document.value1;
-
-        const value1 = "拍手";
-            
-        const name =
-            document.value2;
-            
-            const value2 = "";
+    const category =
+        document.value("拍手");
             
     const message =
         document
-        .getElementById("message")
+        .getElementById("clapMessage")
         .value
-        .trim;
+        .trim();
     
 
     await sendToDiscord({

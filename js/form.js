@@ -8,7 +8,8 @@ async function sendMessage() {
     const name =
         document
             .getElementById("name")
-            .value;
+            .value
+            .trim();
 
     const message =
         document
@@ -36,6 +37,11 @@ async function sendMessage() {
     document
     .getElementById("category")
     .selectedIndex = 0;
+
+    document
+    .getElementById("name")
+    .value = "";
+
 
     document
     .getElementById("message")
