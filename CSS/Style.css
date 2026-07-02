@@ -200,7 +200,7 @@ font-family: "ryo-display-plusn", serif;
 
 }
 .updateBox hr {
-	high: 1px;
+	height: 1px;
 	width: 100%;
 	color: #8db6b6;
 }
@@ -215,7 +215,7 @@ font-family: "ryo-display-plusn", serif;
     font-size: 0.9rem;
 }
 
-.updateBox {
+.resBox {
 background: #fff;
     box-shadow: 0px 0px 0px 5px #F3F0EC;
 	width: 80%;
@@ -241,7 +241,7 @@ font-family: "ryo-display-plusn", serif;
 
 }
 .resBox hr {
-	high: 1px;
+	height: 1px;
 	width: 100%;
 	color: #8db6b6;
 }
