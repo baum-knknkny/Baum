@@ -214,6 +214,48 @@ font-family: "ryo-display-plusn", serif;
 
     font-size: 0.9rem;
 }
+
+.updateBox {
+background: #fff;
+    box-shadow: 0px 0px 0px 5px #F3F0EC;
+	width: 80%;
+    margin: 30px 10% 0px 10%;
+	padding: 5%;
+    color: #454545;
+	text-align: left;
+	font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
+    border: solid 1px #ccc;
+    
+
+}
+
+.resBox h3 {
+font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 2%;
+	font-size: 1.5em;
+	font-variation-settings: "wght" 250;;
+
+}
+.resBox hr {
+	high: 1px;
+	width: 100%;
+	color: #8db6b6;
+}
+
+.resDate {
+
+    text-align: right;
+    margin-top: 10px;
+
+    color: gray;
+
+    font-size: 0.9rem;
+}
+
 button{
    position: relative;
      background-color: transparent; /* 背景を透明に設定 */
