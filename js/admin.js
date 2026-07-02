@@ -2,7 +2,7 @@ async function saveTest(){
 
     await fetch(
 
-        "https://editor-worker.○○○.workers.dev",
+        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev",
 
         {
 
