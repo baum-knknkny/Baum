@@ -1,17 +1,9 @@
-async function increaseVisitor() {
+async function loadVisitor(){
 
-    const response = await fetch(
-        "https://counter-woker.hutuuneko-mukiryoku.workers.dev/",
-        {
-            method: "POST"
-        }
-    );
-
-console.log(response.status);
-
-    const data = await response.json();
-    
-        console.log(data);
+    const data =
+        await getCounter(
+            "visitor"
+        );
 
     document
         .getElementById("visitorCount")
@@ -20,5 +12,16 @@ console.log(response.status);
 
 }
 
-increaseVisitor();
+async function increaseVisitor(){
 
+    const data =
+        await addCounter(
+            "visitor"
+        );
+
+    document
+        .getElementById("visitorCount")
+        .textContent =
+        data.count;
+
+}

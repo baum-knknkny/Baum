@@ -1,5 +1,7 @@
 let currentStoryId = "";
 
+const novelName = "novel-a";
+
 function getAFirstName() {
     return localStorage.getItem("dreamAFirstName")
         || "アカリ";
@@ -122,9 +124,12 @@ function generateStoryList() {
 }
 
 
+
 async function openStory(id) {
 
     currentStoryId = id;
+
+    await loadLike(id);
 
     console.log("開こうとしてる:", id);
 
@@ -273,4 +278,3 @@ function backToList() {
 }
 
 generateStoryList();
-
