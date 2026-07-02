@@ -1,9 +1,6 @@
 async function sendMessage() {
 
-    const getCategory = {
-
-        category: "拍手"
-    };
+    const category = "拍手";
 
     const message =
         document
