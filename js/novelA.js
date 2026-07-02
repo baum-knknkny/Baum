@@ -129,8 +129,6 @@ async function openStory(id) {
 
     currentStoryId = id;
 
-    await loadLike(id);
-
     console.log("開こうとしてる:", id);
 
     const path =
@@ -275,6 +273,22 @@ function backToList() {
         .getElementById("home")
         .style.display =
         "block";
+}
+
+async function loadLike() {
+
+    const data =
+        await getCounter(
+            "like",
+            novelName,
+            currentStoryId
+        );
+
+    document
+        .getElementById("likeCount")
+        .textContent =
+        data.count;
+
 }
 
 generateStoryList();

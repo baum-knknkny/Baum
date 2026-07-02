@@ -1,3 +1,10 @@
+fetch(
+    `${workerURL}?type=visitor`,
+    {
+        method:"POST"
+    }
+);
+
 async function loadVisitor(){
 
     const data =
