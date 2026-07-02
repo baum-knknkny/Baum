@@ -65,6 +65,7 @@ document
         .getElementById("clapStory")
         .style.display =
         "block";
+}
 
 async function sendToDiscord(data) {
 
