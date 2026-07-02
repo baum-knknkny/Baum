@@ -1,9 +1,9 @@
 async function sendMessage() {
 
-    const category =
-        document
-        .value
-        .trim("拍手");
+    const getCategory = {
+
+        category: "拍手"
+    };
 
     const message =
         document
