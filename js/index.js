@@ -7,7 +7,11 @@ async function increaseVisitor() {
         }
     );
 
+console.log(response.status);
+
     const data = await response.json();
+    
+        console.log(data);
 
     document
         .getElementById("visitorCount")
