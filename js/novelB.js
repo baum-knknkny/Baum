@@ -1,4 +1,5 @@
 let currentStoryId = "";
+const novelName = "novel-b";
 
 function getBFirstName() {
     return localStorage.getItem("dreamBFirstName")
