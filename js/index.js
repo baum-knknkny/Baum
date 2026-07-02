@@ -44,4 +44,4 @@ document
 
 .textContent =
 
-updateList[0].date;
+newList[0].date;
