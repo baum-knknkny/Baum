@@ -280,7 +280,22 @@ button:before{
 }
 
 
+.story-nav{
 
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:40px;
+
+}
+
+.story-nav button{
+    background-color: transparent; /* 背景を透明に設定 */
+    border: none; /* ボーダーも非表示にする場合 */
+    cursor:pointer;
+
+}
 
 .chapter{
     display:block;

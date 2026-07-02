@@ -1,3 +1,5 @@
+let currentStoryId = "";
+
 function getShortFirstName() {
     return localStorage.getItem("dreamShortFirstName")
         || "アリス";
@@ -122,6 +124,8 @@ function generateStoryList() {
 
 async function openStory(id) {
 
+    currentStoryId = id;
+
     console.log("開こうとしてる:", id);
 
     const path =
@@ -181,6 +185,76 @@ async function openStory(id) {
         .getElementById("storyPage")
         .style.display =
         "block";
+
+        updateStoryButtons();
+        window.scrollTo(0, 0);
+}
+
+function updateStoryButtons() {
+
+    const index =
+        storyListShort.findIndex(
+            story =>
+                story.id === currentStoryId
+        );
+
+    document
+        .getElementById("prevButton")
+        .style.display =
+        index === 0
+        ? "none"
+        : "inline-block";
+
+    document
+        .getElementById("nextButton")
+        .style.display =
+        index === storyListShort.length - 1
+        ? "none"
+        : "inline-block";
+
+}
+
+async function openPrevStory() {
+
+    const index =
+        storyListShort.findIndex(
+            story =>
+                story.id === currentStoryId
+        );
+
+    if (index > 0) {
+
+        openStory(
+            storyListShort[
+                index - 1
+            ].id
+        );
+
+    }
+
+}
+
+async function openNextStory() {
+
+    const index =
+        storyListShort.findIndex(
+            story =>
+                story.id === currentStoryId
+        );
+
+    if (
+        index <
+        storyListShort.length - 1
+    ) {
+
+        openStory(
+            storyListShort[
+                index + 1
+            ].id
+        );
+
+    }
+
 }
 
 function backToList() {

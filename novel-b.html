@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE互換モード対策 -->
 <title>白百合のそばで</title>
-<script src="js/novel.js"></script>
 </head>
 <body>
 <div class="box2">
@@ -53,10 +52,25 @@
 
         <div id="novel"></div>
 <br><br>
-        <button onclick="backToList()">
-            ← 一覧へ戻る
-        </button>
+    <div class="center"><button
+        id="prevButton"
+        onclick="openPrevStory()">
+        ←
+    </button>
+    
 
+        <button onclick="backToList()">
+            目次
+        </button>
+        <button
+        id="nextButton"
+        onclick="openNextStory()">
+        →
+    </button></div>
+        <div class="story-nav">
+
+
+</div>
     </div>
 
     <script src="js/content/storyB.js"></script>
