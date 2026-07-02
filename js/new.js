@@ -32,7 +32,7 @@ async function generateUpdates() {
         </div>
     `;
 
-    }
+    }}
 
 }
 
