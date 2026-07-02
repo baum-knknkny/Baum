@@ -1,8 +1,10 @@
 async function sendMessage() {
 
     const category =
-        document.value("拍手");
-            
+        document
+        .value
+        .trim("拍手");
+
     const message =
         document
         .getElementById("clapMessage")
