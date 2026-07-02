@@ -125,7 +125,6 @@ function generateStoryList() {
 async function openStory(id) {
 
     currentStoryId = id;
-    await loadLike();
 
     console.log("開こうとしてる:", id);
 
@@ -187,6 +186,7 @@ async function openStory(id) {
         .style.display =
         "block";
 
+            await loadLike();
         updateStoryButtons();
         window.scrollTo(0, 0);
 }

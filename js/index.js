@@ -32,4 +32,9 @@ async function increaseVisitor(){
         data.count;
 
 }
-increaseVisitor();
+
+window.onload = async () => {
+
+    await increaseVisitor();
+
+};
