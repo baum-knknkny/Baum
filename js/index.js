@@ -32,3 +32,4 @@ async function increaseVisitor(){
         data.count;
 
 }
+increaseVisitor();
