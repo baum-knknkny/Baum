@@ -57,15 +57,14 @@ document
     title;
 
 document
-    .getElementById("clapStory")
-    .innerHTML =
-    content;
+        .getElementById("clapArea")
+        .style.display =
+        "none";
 
-document
-    .getElementById("clapArea")
-    .style.display =
-    "block";
-    }
+    document
+        .getElementById("clapStory")
+        .style.display =
+        "block";
 
 async function sendToDiscord(data) {
 
