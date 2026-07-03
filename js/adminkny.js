@@ -1,38 +1,42 @@
 async function saveTest() {
 
-    const response = await fetch(
+    const response =
+        await fetch(
 
-        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev",
+            "https://baum-cms.hutuuneko_mukiryoku.workers.dev",
 
-        {
+            {
 
-            method: "POST",
+                method: "POST",
 
-            headers: {
+                headers: {
 
-                "Content-Type":
-                    "application/json"
+                    "Content-Type":
+                        "application/json"
 
-            },
+                },
 
-            body: JSON.stringify({
+                body: JSON.stringify({
 
-                path: "test.txt",
+                    path:
+                        "test.txt",
 
-                content: "Hello Baum!!"
+                    content:
+                        "Hello Baum!!"
 
-            })
+                })
 
-        }
+            }
 
-    );
+        );
 
     console.log(
-        await response.text()
+
+        await response.json()
+
     );
 
 }
-
 function generateMarkdown() {
 
     const chapter =
