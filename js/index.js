@@ -44,4 +44,4 @@ document
 
 .textContent =
 
-newList[newList.length].date;
+newList[0].date;
