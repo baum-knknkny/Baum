@@ -60,7 +60,7 @@ function generateMarkdown() {
             .getElementById("body")
             .value;
 
-    // 今日の日付
+    // 今日の日付   
 
     const today = new Date();
 
