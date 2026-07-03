@@ -21,11 +21,11 @@
 
 </button>
 
-    <h1>小説管理画面</h1>
+    <h2>小説管理画面</h2>
 
     <section>
 
-        <h2>作品</h2>
+        <h3>作品</h3>
 
         <select id="series">
 
@@ -47,7 +47,7 @@
 
     <section>
 
-        <h2>章番号</h2>
+        <h3>章番号</h3>
 
         <input
             id="chapter"
@@ -58,7 +58,7 @@
 
     <section>
 
-        <h2>章タイトル</h2>
+        <h3>章タイトル</h3>
 
         <input
             id="chapterName"
@@ -68,7 +68,7 @@
 
     <section>
 
-        <h2>話数</h2>
+        <h3>話数</h3>
 
         <input
             id="episode"
@@ -79,7 +79,7 @@
 
     <section>
 
-        <h2>タイトル</h2>
+        <h3>タイトル</h3>
 
         <input
             id="title"
@@ -88,7 +88,7 @@
     </section>
 <section>
 
-        <h2>要約<h2>
+        <h3>要約</h3>
 
         <input
             id="summary"
@@ -97,12 +97,11 @@
     </section>
     <section>
 
-        <h2>本文</h2>
+        <h3>本文</h3>
 
         <textarea
             id="body"
-            rows="20"
-            cols="90"></textarea>
+            class="admin"></textarea>
 
     </section>
 
@@ -114,12 +113,12 @@
 
     <hr>
 
-    <h2>生成結果(Markdown)</h2>
+    <h3>生成結果(Markdown)</h3>
 
     <textarea
         id="result"
-        rows="20"
-        cols="90"
+        class="admin"
+
         readonly></textarea>
 
     <br>
@@ -130,11 +129,10 @@
         <p id="filename"></p>
 
 <br><br>
-    <h2>生成結果（JavaScript）</h2>
+    <h3>生成結果（JavaScript）</h3>
     <textarea
         id="resultJs"
-        rows="15"
-        cols="90"
+class="admin"
         readonly></textarea>
 
     <br>

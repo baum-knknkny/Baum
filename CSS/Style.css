@@ -330,6 +330,15 @@ button:before{
     margin-top:20px;
 }
 
+.admin textarea{
+  width: 100%;
+  height: 300px;
+  font-family: "ryo-display-plusn", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
 .content{
   width: 93%;
   max-width: 600px;
