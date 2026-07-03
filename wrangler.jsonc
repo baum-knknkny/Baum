@@ -19,4 +19,6 @@
       "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
     }
   ]
+  // wrangler.jsonc
+
 }
