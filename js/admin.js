@@ -9,13 +9,21 @@ async function saveTest(){
 
                 method:"POST",
 
-                headers:{
+                headers: {
 
-                    "Content-Type":
-                        "application/json"
+    Authorization:
+        `Bearer ${env.GITHUB_TOKEN}`,
 
-                },
+    Accept:
+        "application/vnd.github+json",
 
+    "Content-Type":
+        "application/json",
+
+    "User-Agent":
+        "BaumCMS"
+
+},
                 body:JSON.stringify({
 
                     path:"test.txt",
