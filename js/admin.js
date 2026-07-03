@@ -3,7 +3,7 @@ async function saveTest(){
     const response =
         await fetch(
 
-            "https://editor-worker.○○○.workers.dev",
+            "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev/",
 
             {
 
