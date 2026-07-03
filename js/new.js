@@ -8,28 +8,38 @@ async function generateUpdates() {
     const updates =
         [...newList].reverse();
 
-    for (const id of updates) {
-    const response = await fetch(
-        `content/new/${item.id}.md`   // プロパティを明示
-    );
+    for (const item of updates) {
 
-    const markdown = await response.text();
-    const parts = markdown.split("---");
-    const frontMatter = parts[1];
-    const content = parts[2];
+        const response =
+            await fetch(
+                `content/new/${item.id}.md`
+            );
 
-    // frontMatterからパースせず、リストのデータをそのまま使ってもOK
-    const title = frontMatter.match(/title:\s*(.*)/)[1];
-    const date  = frontMatter.match(/date:\s*(.*)/)[1];
+        const markdown =
+            await response.text();
 
-    list.innerHTML += `
+        const parts =
+            markdown.split("---");
+
+        const content =
+            parts[2];
+
+        list.innerHTML +=
+        `
         <div class="updateBox">
-            <h3>${title}</h3>
+
+            <h3>${item.title}</h3>
+
             <hr>
+
             <p>${content}</p>
-            <div class="updateDate">${date}</div>
+
+            <div class="updateDate">
+                ${item.date}
+            </div>
+
         </div>
-    `;
+        `;
 
     }
 
