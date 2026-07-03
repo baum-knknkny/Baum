@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "baum",
-  "main": "js/index.js",
+  "name": "edirtor-workor",
+  "main": "src/index.ts",
   "compatibility_date": "2026-06-29",
   "observability": {
     "enabled": true
