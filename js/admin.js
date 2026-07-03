@@ -2,7 +2,7 @@ async function saveTest(){
 
     const response = await fetch(
 
-        "https://baum.edirtor.workor.workers.dev",
+        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev/",
 
         {
 
