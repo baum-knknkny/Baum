@@ -33,15 +33,24 @@ async function increaseVisitor(){
 
 }
 
+function getLatestDate(){
+
+    const latest =
+        [...newList].sort(
+            (a, b) =>
+                new Date(b.date) - new Date(a.date)
+        )[0];
+
+    document
+        .getElementById("latestDate")
+        .textContent =
+        latest.date;
+
+}
+
 window.onload = async () => {
 
     await increaseVisitor();
+    getLatestDate();
 
 };
-document
-
-.getElementById("lastUpdate")
-
-.textContent =
-
-newList[0].date;
