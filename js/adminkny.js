@@ -1,30 +1,35 @@
-async function saveTest(){
+async function saveTest() {
 
     const response = await fetch(
 
-        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev/",
+        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev",
 
         {
 
-            method:"POST",
+            method: "POST",
 
-            headers:{
-                "Content-Type":"application/json"
+            headers: {
+
+                "Content-Type":
+                    "application/json"
+
             },
 
-            body:JSON.stringify({
+            body: JSON.stringify({
 
-                path:"test.txt",
+                path: "test.txt",
 
-                content:"Hello Baum!!"
+                content: "Hello Baum!!"
 
             })
 
         }
 
     );
- 
-    console.log(await response.text());
+
+    console.log(
+        await response.text()
+    );
 
 }
 
