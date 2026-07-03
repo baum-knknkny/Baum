@@ -1,33 +1,36 @@
 async function saveTest(){
 
-    await fetch(
+    const response =
+        await fetch(
 
-        "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev",
+            "https://editor-worker.○○○.workers.dev",
 
-        {
+            {
 
-            method:"POST",
+                method:"POST",
 
-            headers:{
+                headers:{
 
-                "Content-Type":
-                    "application/json"
+                    "Content-Type":
+                        "application/json"
 
-            },
+                },
 
-            body:JSON.stringify({
+                body:JSON.stringify({
 
-                path:"test2.txt",
+                    path:"test.txt",
 
-                content:"Hello Baum!!"
+                    content:"Hello Baum!!"
 
-            })
+                })
 
-        }
+            }
 
+        );
+
+    console.log(
+        await response.text()
     );
-
-    alert("送信しました！");
 
 }
 
