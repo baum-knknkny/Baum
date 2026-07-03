@@ -1,44 +1,30 @@
 async function saveTest(){
 
-    const response =
-        await fetch(
+    const response = await fetch(
 
-            "https://edirtor-workor.hutuuneko-mukiryoku.workers.dev/",
+        "https://baum.edirtor.workor.workers.dev",
 
-            {
+        {
 
-                method:"POST",
+            method:"POST",
 
-                headers: {
+            headers:{
+                "Content-Type":"application/json"
+            },
 
-    Authorization:
-        `Bearer ${env.GITHUB_TOKEN}`,
+            body:JSON.stringify({
 
-    Accept:
-        "application/vnd.github+json",
+                path:"test.txt",
 
-    "Content-Type":
-        "application/json",
+                content:"Hello Baum!!"
 
-    "User-Agent":
-        "BaumCMS"
+            })
 
-},
-                body:JSON.stringify({
+        }
 
-                    path:"test.txt",
-
-                    content:"Hello Baum!!"
-
-                })
-
-            }
-
-        );
-
-    console.log(
-        await response.text()
     );
+
+    console.log(await response.text());
 
 }
 
