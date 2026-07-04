@@ -1,9 +1,9 @@
-async function saveTest() {
+async function saveMarkdown() {
 
     const response =
         await fetch(
 
-            "https://baum-cms.hutuuneko-mukiryoku.workers.dev",
+            "https://baum-cms.hutuuneko-mukiryoku.workers.dev/",
 
             {
 
@@ -18,11 +18,16 @@ async function saveTest() {
 
                 body: JSON.stringify({
 
-                    path:
-                        "test.txt",
+                    action: "saveMarkdown",
 
-                    content:
-                        "Hello Baum!!"
+                    path:
+                        "content/test.md",
+
+                    title:
+                        document.getElementById("title").value,
+
+                    body:
+                        document.getElementById("body").value
 
                 })
 
@@ -31,11 +36,8 @@ async function saveTest() {
         );
 
     console.log(
-
         await response.json()
-
     );
-
 
 }
 function generateMarkdown() {
