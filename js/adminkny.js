@@ -3,7 +3,7 @@ async function saveMarkdown() {
     const response =
         await fetch(
 
-            "https://baum-cms.hutuuneko-mukiryoku.workers.dev/",
+            "https://baum-cms.hutuuneko-mukiryoku.workers.dev",
 
             {
 
