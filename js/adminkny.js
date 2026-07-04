@@ -1,4 +1,4 @@
-async function saveMarkdown() {
+async function saveStory() {
 
     const response =
         await fetch(
