@@ -1,3 +1,26 @@
+let clapList = [];
+
+async function initClapList() {
+
+    try {
+
+        const response =
+            await fetch("../js/content/clapList.json");
+
+        clapList =
+            await response.json();
+
+    } catch (err) {
+
+        console.error(
+            "拍手リストの取得に失敗しました",
+            err
+        );
+    }
+}
+
+initClapList();
+
 async function sendMessage() {
 
     const category = "拍手";
@@ -7,64 +30,68 @@ async function sendMessage() {
         .getElementById("clapMessage")
         .value
         .trim();
-    
+
 
     await sendToDiscord({
 
-    category,
+        category,
 
-    name,
+        name,
 
-    message
+        message
 
-});
+    });
     await showRandomClap();
-    
+
 }
 
 async function showRandomClap() {
-const randomID =
-    clapList[
-        Math.floor(Math.random() * clapList.length)
-    ];
 
+    if (clapList.length === 0) {
+        console.error("拍手リストがまだ読み込まれていません");
+        return;
+    }
 
-const response =
-    await fetch(
-        `../../content/clap/${randomID}.md`
-    );
+    const randomID =
+        clapList[
+            Math.floor(Math.random() * clapList.length)
+        ];
 
-const markdown =
-    await response.text();
+    const response =
+        await fetch(
+            `../content/clap/${randomID}.md`
+        );
 
-const parts =
-    markdown.split("---");
+    const markdown =
+        await response.text();
 
-const frontMatter =
-    parts[1];
-    
-const content =
-    parts[2];
+    const parts =
+        markdown.split("---");
 
-const title =
-    frontMatter.match(
-        /title:\s*(.*)/
-    )[1];
+    const frontMatter =
+        parts[1];
 
-document
-    .getElementById("clapTitle")
-    .textContent =
-    title;
-document
+    const content =
+        parts[2];
+
+    const title =
+        frontMatter.match(
+            /title:\s*(.*)/
+        )[1];
+
+    document
+        .getElementById("clapTitle")
+        .textContent =
+        title;
+    document
         .getElementById("clapStory")
         .textContent =
         content;
-document
+    document
         .getElementById("clapArea")
         .style.display =
         "block";
 
-    
 }
 
 async function sendToDiscord(data) {

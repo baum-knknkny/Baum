@@ -1,8 +1,11 @@
+
 let currentStoryId = "";
-const novelName = "novelShort";
 
+let storyListShort = [];
 
-function getShortFirstName() {
+const novelName = "short";
+
+function getShortFirstName() { 
     return localStorage.getItem("dreamShortFirstName")
         || "アリス";
 }
@@ -11,7 +14,6 @@ function getShortLastName() {
     return localStorage.getItem("dreamShortLastName")
         || "ローレル";
 }
-
 
 function saveShortFirstName() {
 
@@ -91,7 +93,7 @@ function generateStoryList() {
         chapter.stories.forEach(story => {
 
             storyButtons += `
-                <button
+                <button class="color-button" 
                     onclick="openStory('${story.id}')"
                 >
                     ${story.title}
@@ -187,10 +189,12 @@ async function openStory(id) {
         .getElementById("storyPage")
         .style.display =
         "block";
+
     await loadLike();
 
-        updateStoryButtons();
-        window.scrollTo(0, 0);
+    updateStoryButtons();
+
+    window.scrollTo(0, 0);
 }
 
 function updateStoryButtons() {
@@ -211,10 +215,9 @@ function updateStoryButtons() {
     document
         .getElementById("nextButton")
         .style.display =
-        index === storyListShort.length - 1
+        index === storyListB.length - 1
         ? "none"
         : "inline-block";
-
 }
 
 async function openPrevStory() {
@@ -232,9 +235,7 @@ async function openPrevStory() {
                 index - 1
             ].id
         );
-
     }
-
 }
 
 async function openNextStory() {
@@ -246,18 +247,15 @@ async function openNextStory() {
         );
 
     if (
-        index <
-        storyListShort.length - 1
-    ) {
+        index < storyListShort.length - 1
+    ) ;{
 
         openStory(
             storyListShort[
                 index + 1
             ].id
         );
-
     }
-
 }
 
 function backToList() {
@@ -272,6 +270,22 @@ function backToList() {
         .style.display =
         "block";
 }
+
+async function loadLike(){
+
+    const data =
+        await getCounter(
+            "like",
+            novelName,
+            currentStoryId
+        );
+
+    document
+        .getElementById("likeCount")
+        .textContent =
+        data.count;
+}
+
 async function addLike(){
 
     const data =
@@ -287,16 +301,39 @@ async function addLike(){
         data.count;
 
     document
-    .getElementById("likeButton")
-    .textContent =
-    "♥ 応援ありがとう！";
+        .getElementById("likeButton")
+        .textContent =
+        "♥ 応援ありがとう！";
 
     setTimeout(() => {
 
-    document
-        .getElementById("likeButton")
-        .textContent =
-        "♡ 応援する";
+        document
+            .getElementById("likeButton")
+            .textContent =
+            "♡ 応援する";
 
-},1000);}
-generateStoryList();
+    }, 1000);
+}
+
+async function initStoryListShort() {
+
+    try {
+
+        const response =
+            await fetch("../../js/content/storyShort.json");
+
+        storyListShort =
+            await response.json();
+
+        generateStoryList();
+
+    } catch (err) {
+
+        console.error(
+            "話一覧の取得に失敗しました",
+            err
+        );
+    }
+}
+
+initStoryListShort();

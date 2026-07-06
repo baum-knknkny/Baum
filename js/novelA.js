@@ -1,5 +1,7 @@
 let currentStoryId = "";
 
+let storyListA = [];
+
 const novelName = "novel-a";
 
 function getAFirstName() {
@@ -123,8 +125,6 @@ function generateStoryList() {
     });
 }
 
-
-
 async function openStory(id) {
 
     currentStoryId = id;
@@ -189,14 +189,12 @@ async function openStory(id) {
         .style.display =
         "block";
 
-            await loadLike();
+    await loadLike();
 
-updateStoryButtons();
+    updateStoryButtons();
 
-window.scrollTo(0, 0);
-
-}
-
+    window.scrollTo(0, 0);
+    }
 
 function updateStoryButtons() {
 
@@ -216,10 +214,9 @@ function updateStoryButtons() {
     document
         .getElementById("nextButton")
         .style.display =
-        index === storyListA.length - 1
+        index === storyListA.length - 1 
         ? "none"
-        : "inline-block";
-
+            : "inline-block";
 }
 
 async function openPrevStory() {
@@ -236,10 +233,8 @@ async function openPrevStory() {
             storyListA[
                 index - 1
             ].id
-        );
-
-    }
-
+            );
+        }
 }
 
 async function openNextStory() {
@@ -251,9 +246,8 @@ async function openNextStory() {
         );
 
     if (
-        index <
-        storyListA.length - 1
-    ) {
+        index < storyListA.length - 1
+        ) ;{    
 
         openStory(
             storyListA[
@@ -290,7 +284,6 @@ async function loadLike(){
         .getElementById("likeCount")
         .textContent =
         data.count;
-
 }
 
 async function addLike(){
@@ -321,4 +314,25 @@ async function addLike(){
 
 },1000);}
 
-generateStoryList();
+async function initStoryListA() {
+
+    try {
+
+        const response =
+            await fetch("../../js/content/storyA.json");
+
+        storyListA =
+            await response.json();
+
+        generateStoryList();
+
+    } catch (err) {
+
+        console.error(
+            "話一覧の取得に失敗しました",
+            err
+        );
+    }
+}
+
+initStoryListA();

@@ -1,4 +1,7 @@
 let currentStoryId = "";
+
+let storyListB = [];
+
 const novelName = "novel-b";
 
 function getBFirstName() {
@@ -10,7 +13,6 @@ function getBLastName() {
     return localStorage.getItem("dreamBLastName")
         || "シラサキ";
 }
-
 
 function saveBFirstName() {
 
@@ -90,7 +92,7 @@ function generateStoryList() {
         chapter.stories.forEach(story => {
 
             storyButtons += `
-                <button
+                <button class="color-button" 
                     onclick="openStory('${story.id}')"
                 >
                     ${story.title}
@@ -187,9 +189,11 @@ async function openStory(id) {
         .style.display =
         "block";
 
-            await loadLike();
-        updateStoryButtons();
-        window.scrollTo(0, 0);
+    await loadLike();
+
+    updateStoryButtons();
+
+    window.scrollTo(0, 0);
 }
 
 function updateStoryButtons() {
@@ -213,7 +217,6 @@ function updateStoryButtons() {
         index === storyListB.length - 1
         ? "none"
         : "inline-block";
-
 }
 
 async function openPrevStory() {
@@ -231,9 +234,7 @@ async function openPrevStory() {
                 index - 1
             ].id
         );
-
     }
-
 }
 
 async function openNextStory() {
@@ -245,18 +246,15 @@ async function openNextStory() {
         );
 
     if (
-        index <
-        storyListB.length - 1
-    ) {
+        index < storyListB.length - 1
+    ) ;{
 
         openStory(
             storyListB[
                 index + 1
             ].id
         );
-
     }
-
 }
 
 function backToList() {
@@ -271,6 +269,22 @@ function backToList() {
         .style.display =
         "block";
 }
+
+async function loadLike(){
+
+    const data =
+        await getCounter(
+            "like",
+            novelName,
+            currentStoryId
+        );
+
+    document
+        .getElementById("likeCount")
+        .textContent =
+        data.count;
+}
+
 async function addLike(){
 
     const data =
@@ -286,16 +300,39 @@ async function addLike(){
         data.count;
 
     document
-    .getElementById("likeButton")
-    .textContent =
-    "♥ 応援ありがとう！";
+        .getElementById("likeButton")
+        .textContent =
+        "♥ 応援ありがとう！";
 
     setTimeout(() => {
 
-    document
-        .getElementById("likeButton")
-        .textContent =
-        "♡ 応援する";
+        document
+            .getElementById("likeButton")
+            .textContent =
+            "♡ 応援する";
 
-},1000);}
-generateStoryList();
+    }, 1000);
+}
+
+async function initStoryListB() {
+
+    try {
+
+        const response =
+            await fetch("../../js/content/storyB.json");
+
+        storyListB =
+            await response.json();
+
+        generateStoryList();
+
+    } catch (err) {
+
+        console.error(
+            "話一覧の取得に失敗しました",
+            err
+        );
+    }
+}
+
+initStoryListB();
