@@ -1,153 +1,242 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>管理画面</title>
-
-    <link rel="stylesheet"
-        href="../CSS/Style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理画面</title>
+<style>
+  :root {
+    --bg: #f5f3f0;
+    --card: #ffffff;
+    --accent: #b98a5e;
+    --text: #333;
+    --border: #ddd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding-bottom: 100px;
+  }
+  header {
+    background: var(--card);
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  header h1 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+  }
+  .key-row {
+    display: flex;
+    gap: 8px;
+  }
+  .key-row input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .tabs {
+    display: flex;
+    background: var(--card);
+    position: sticky;
+    top: 62px;
+    z-index: 9;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px 4px;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #888;
+    border-bottom: 3px solid transparent;
+  }
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: bold;
+  }
+  main {
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .field {
+    margin-bottom: 16px;
+  }
+  .field label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--card);
+  }
+  .field textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+  #body { min-height: 300px; }
+  .row-2 {
+    display: flex;
+    gap: 10px;
+  }
+  .row-2 > div { flex: 1; }
+  .save-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: var(--card);
+    border-top: 1px solid var(--border);
+  }
+  .save-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .save-btn:disabled {
+    opacity: 0.5;
+  }
+  .status {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    min-height: 1.2em;
+  }
+  .status.error { color: #c0392b; }
+  .status.success { color: #2c7a4b; }
+</style>
 </head>
-
 <body>
-    
-    
-<button onclick="saveTest()">
 
-    Test2ファイル作成
+<header>
+  <h1>小説サイト管理画面</h1>
+  <div class="key-row">
+    <input id="adminKey" type="password" placeholder="管理者キー" autocomplete="off">
+  </div>
+</header>
 
-</button>
+<div class="tabs">
+  <button class="tab-btn active" data-tab="story">ストーリー</button>
+  <button class="tab-btn" data-tab="update">更新履歴</button>
+  <button class="tab-btn" data-tab="reply">お便り返信</button>
+</div>
 
-    <h2>小説管理画面</h2>
+<main>
 
-    <section>
+  <!-- ① ストーリー更新 -->
+  <section id="panel-story" class="panel active">
+    <div class="field">
+      <label>作品</label>
+      <select id="story-series">
+        <option value="novel-a">叶うなら</option>
+        <option value="novel-b">白百合のそばで</option>
+        <option value="short">短編</option>
+      </select>
+    </div>
 
-        <h3>作品</h3>
+    <div class="row-2">
+      <div class="field">
+        <label>章番号</label>
+        <input id="story-chapter" type="number" min="0" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label>話数</label>
+        <input id="story-episode" type="number" min="1" inputmode="numeric">
+      </div>
+    </div>
 
-        <select id="series">
+    <div class="field">
+      <label>章タイトル</label>
+      <input id="story-chapterName" type="text">
+    </div>
 
-            <option value="novel-a">
-                叶うなら
-            </option>
+    <div class="field">
+      <label>タイトル</label>
+      <input id="story-title" type="text">
+    </div>
 
-            <option value="novel-b">
-                白百合のそばで
-            </option>
+    <div class="field">
+      <label>要約</label>
+      <input id="story-summary" type="text">
+    </div>
 
-            <option value="short">
-                短編
-            </option>
+    <div class="field">
+      <label>本文</label>
+      <textarea id="story-body"></textarea>
+    </div>
+  </section>
 
-        </select>
+  <!-- ② 更新履歴 -->
+  <section id="panel-update" class="panel">
+    <div class="field">
+      <label>タイトル</label>
+      <input id="update-title" type="text" placeholder="例: novel-aを更新しました">
+    </div>
+    <div class="field">
+      <label>日付</label>
+      <input id="update-date" type="date">
+    </div>
+    <div class="field">
+      <label>内容</label>
+      <textarea id="update-body"></textarea>
+    </div>
+  </section>
 
-    </section>
+  <!-- ③ お便り返信 -->
+  <section id="panel-reply" class="panel">
+    <div class="field">
+      <label>タイトル（差出人など）</label>
+      <input id="reply-title" type="text" placeholder="例: 匿名さんからのお便り">
+    </div>
+    <div class="field">
+      <label>日付</label>
+      <input id="reply-date" type="date">
+    </div>
+    <div class="field">
+      <label>いただいた質問・お便り</label>
+      <textarea id="reply-question" style="min-height:100px;"></textarea>
+    </div>
+    <div class="field">
+      <label>回答</label>
+      <textarea id="reply-answer" style="min-height:160px;"></textarea>
+    </div>
+  </section>
 
-    <section>
+</main>
 
-        <h3>章番号</h3>
+<div class="save-bar">
+  <button id="saveBtn" class="save-btn">保存する</button>
+  <div id="status" class="status"></div>
+</div>
 
-        <input
-            id="chapter"
-            type="number"
-            min="0">
-
-    </section>
-
-    <section>
-
-        <h3>章タイトル</h3>
-
-        <input
-            id="chapterName"
-            type="text">
-
-    </section>
-
-    <section>
-
-        <h3>話数</h3>
-
-        <input
-            id="episode"
-            type="number"
-            min="1">
-
-    </section>
-
-    <section>
-
-        <h3>タイトル</h3>
-
-        <input
-            id="title"
-            type="text">
-
-    </section>
-<section>
-
-        <h3>要約</h3>
-
-        <input
-            id="summary"
-            type="text" >
-
-    </section>
-    <section>
-
-        <h3>本文</h3>
-
-        <textarea
-            id="body"
-            class="admin"></textarea>
-
-    </section>
-
-    <br>
-
-    <button onclick="saveStory()">
-        ストーリー保存
-    </button>
-
-    <hr>
-
-    <h3>生成結果(Markdown)</h3>
-
-    <textarea
-        id="result"
-        class="admin"
-
-        readonly></textarea>
-
-    <br>
-
-    <button onclick="copyMarkdown()">
-        コピー
-    </button>
-        <p id="filename"></p>
-
-<br><br>
-    <h3>生成結果（JavaScript）</h3>
-    <textarea
-        id="resultJs"
-class="admin"
-        readonly></textarea>
-
-    <br>
-    <button onclick="copyJs()">
-    コピー
-    </button>
-
-
-    <p id="filename"></p>
-
-    <script src="../js/content/storyA.js"></script>
-    <script src="../js/content/storyB.js"></script>
-    <script src="../js/content/storyShort.js"></script>
-    <script src="../js/adminkny.js"></script>
-
+<script src="../js/adminkny.js"></script>
 </body>
-
 </html>
