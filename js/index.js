@@ -96,8 +96,7 @@ async function sendMessage() {
         message
 
     });
-    }
-    async function sendToDiscord(data) {
+        async function sendToDiscord(data) {
 
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
@@ -118,3 +117,5 @@ async function sendMessage() {
 
     );
     }
+    }
+
