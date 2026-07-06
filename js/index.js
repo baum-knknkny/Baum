@@ -92,6 +92,8 @@ async function sendClapMessage() {
         message
 
     });
+    sendToDiscord()
+    
     }
 
             async function sendToDiscord(data) {
