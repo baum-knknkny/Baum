@@ -80,11 +80,7 @@ async function sendClapMessage() {
 
     const category = "拍手";
 
-    const message =
-        document
-        .getElementById("clapMessage")
-        .value
-        .trim();
+    const message = "";
 
 
     await sendToDiscord({
