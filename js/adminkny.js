@@ -1,4 +1,45 @@
 async function saveStory() {
+  const series = document.getElementById('series').value;
+  const chapter = Number(document.getElementById('chapter').value);
+  const chapterName = document.getElementById('chapterName').value.trim();
+  const episode = Number(document.getElementById('episode').value);
+  const title = document.getElementById('title').value.trim();
+  const summary = document.getElementById('summary').value.trim();
+  const body = document.getElementById('body').value;
+
+  if (!chapterName || !title || !body) {
+    alert('入力に不足があります');
+    return;
+  }
+
+  const btn = document.activeElement;
+  btn.disabled = true;
+  btn.textContent = '保存中...';
+
+  try {
+    const res = await fetch('/api/save-story', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-key': localStorage.getItem('adminKey') || ''
+      },
+      body: JSON.stringify({ series, chapter, chapterName, episode, title, summary, body })
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || '保存に失敗しました');
+
+    alert(`保存しました: ${data.fileName}`);
+  } catch (err) {
+    console.error(err);
+    alert('エラー: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'ストーリー保存';
+  }
+}
+
+/**async function saveStory() {
 
     const response =
         await fetch(
@@ -181,4 +222,4 @@ function copyJs() {
     navigator.clipboard.writeText(
         result.value
     );
-}
+}/**/
