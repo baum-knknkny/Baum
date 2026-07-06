@@ -76,7 +76,7 @@ window.onload = async () => {
 
 };
 
-async function sendMessage() {
+async function sendClapMessage() {
 
     const category = "拍手";
 
@@ -96,7 +96,11 @@ async function sendMessage() {
         message
 
     });
-        async function sendToDiscord(data) {
+
+    sendToDiscord();
+    }
+
+            async function sendToDiscord(data) {
 
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
@@ -117,5 +121,5 @@ async function sendMessage() {
 
     );
     }
-    }
+
 
