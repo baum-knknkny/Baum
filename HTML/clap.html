@@ -15,18 +15,29 @@
 <link rel="stylesheet" href="CSS/Style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE互換モード対策 -->
-<title>new</title>
+<title>clap</title>
 	<link rel="icon" href="image/top.png" type="image/x-icon">
 
 </head>
 <body>
-    <div class="box"><h2>new</h2></div>
+    <div class="box"><h2>clap</h2></div>
+<div class="box2"><div class="center"><p>サイトを閲覧いただき、ありがとうございます！<br>
+コメント等いただければ励みになります。<br>
+お気軽にお送りください！</p>
+<textarea id="clapMessage" type="text" placeholder="メッセージを入力（任意）" cols="30" rows="5">
+</textarea>
+<br>
+<button onclick="sendMessage()">拍手してSSを読む</button></div>
+<br>
+<br>
+<div id="clapArea"><br>
+  <h3><div id="clapTitle"></div></h3>
+  <div id="clapStory"></div>
+</div>
+</div>
+    <script src="js/content/clapList.js"></script>
+    <script src="js/clap.js"></script>
 
-  <div id="newList"></div>
-<div id="pageButton"></div>
-    <script src="js/content/newList.js"></script>
-    <script src="js/new.js"></script>
-
-    <footer><p><a href="index.html">top</a></p></footer>
+    <footer><p><a href="HTML/index.html">top</a></p></footer>
 </body>
 </html>

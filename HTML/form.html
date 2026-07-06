@@ -15,18 +15,44 @@
 <link rel="stylesheet" href="CSS/Style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE互換モード対策 -->
-<title>res</title>
+<title>form</title>
 	<link rel="icon" href="image/top.png" type="image/x-icon">
 
 </head>
 <body>
-    <div class="box"><h2>res</h2></div>
+    <div class="box"><h2>form</h2></div>
+<div class="box2"><div class="center"><p>当サイトを閲覧いただきありがとうございます。<br>
+リクエスト、誤字・脱字報告、メッセージ等お気軽にお送りください。</p>
+<p>category　<select id="category">
 
-  <div id="resList"></div>
-<div id="pageButton"></div>
-    <script src="js/content/resList.js"></script>
-    <script src="js/res.js"></script>
+    <option value="リクエスト">
+        リクエスト
+    </option>
 
-    <footer><p><a href="index.html">top</a></p></footer>
+    <option value="誤字・脱字">
+        誤字・脱字
+    </option>
+
+    <option value="メッセージ">
+        メッセージ
+    </option>
+
+    <option value="その他">
+        その他
+    </option>
+
+</select><br>
+name　<input id="name" placeholder="任意" rows="2"></input></p>
+<textarea
+    id="message"
+    placeholder="メッセージを入力してください" cols="30" rows="5">
+</textarea>
+<br>
+<button onclick="sendMessage()">
+    送信
+</button></div></div>
+    <script src="js/form.js"></script>
+
+    <footer><p><a href="HTML/index.html">top</a></p></footer>
 </body>
 </html>
