@@ -75,3 +75,46 @@ window.onload = async () => {
     getLatestDate();
 
 };
+
+async function sendMessage() {
+
+    const category = "拍手";
+
+    const message =
+        document
+        .getElementById("clapMessage")
+        .value
+        .trim();
+
+
+    await sendToDiscord({
+
+        category,
+
+        name,
+
+        message
+
+    });
+    }
+    async function sendToDiscord(data) {
+
+    await fetch(
+        "https://clap.hutuuneko-mukiryoku.workers.dev",
+        {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type":
+                    "application/json"
+
+            },
+
+            body: JSON.stringify(data)
+
+        }
+
+    );
+    }
