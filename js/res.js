@@ -12,7 +12,7 @@ async function generateRes() {
 
         const response =
             await fetch(
-                `content/res/${id}.md`
+                `../content/res/${id}.md`
             );
 
         const markdown =

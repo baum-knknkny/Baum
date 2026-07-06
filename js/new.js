@@ -12,7 +12,7 @@ async function generateUpdates() {
 
         const response =
             await fetch(
-                `content/new/${item.id}.md`
+                `../../content/new/${item.id}.md`
             );
 
         const markdown =

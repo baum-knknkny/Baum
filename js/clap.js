@@ -31,7 +31,7 @@ const randomID =
 
 const response =
     await fetch(
-        `content/clap/${randomID}.md`
+        `../../content/clap/${randomID}.md`
     );
 
 const markdown =

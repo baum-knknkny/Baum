@@ -132,7 +132,7 @@ async function openStory(id) {
     console.log("開こうとしてる:", id);
 
     const path =
-        `content/novel/novel-a/${id}.md`;
+        `../../content/novel/novel-a/${id}.md`;
 
     console.log("パス:", path);
 
