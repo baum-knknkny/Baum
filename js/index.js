@@ -33,20 +33,41 @@ async function increaseVisitor(){
 
 }
 
-function getLatestDate(){
+async function getLatestDate(){
 
-    const latest =
-        [...newList].sort(
-            (a, b) =>
-                new Date(b.date) - new Date(a.date)
-        )[0];
+    try {
 
-    document
-        .getElementById("latestDate")
-        .textContent =
-        latest.date;
+        const response =
+            await fetch("js/content/newList.json");
 
+        const newList =
+            await response.json();
+
+        if (newList.length === 0) {
+            return;
+        }
+
+        const latest =
+            [...newList].sort(
+                (a, b) =>
+                    new Date(b.date) - new Date(a.date)
+            )[0];
+
+        document
+            .getElementById("latestDate")
+            .textContent =
+            latest.date;
+
+    } catch (err) {
+
+        console.error(
+            "最終更新日の取得に失敗しました",
+            err
+        );
+    }
 }
+
+getLatestDate();
 
 window.onload = async () => {
 
