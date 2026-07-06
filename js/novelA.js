@@ -241,6 +241,7 @@ async function openPrevStory() {
     }
 
 }
+
 async function openNextStory() {
 
     const index =
@@ -259,7 +260,6 @@ async function openNextStory() {
                 index + 1
             ].id
         );
-
     }
 
 }
