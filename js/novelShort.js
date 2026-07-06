@@ -215,7 +215,7 @@ function updateStoryButtons() {
     document
         .getElementById("nextButton")
         .style.display =
-        index === storyListB.length - 1
+        index === storyListShort.length - 1
         ? "none"
         : "inline-block";
 }
