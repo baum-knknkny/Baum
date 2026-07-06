@@ -330,6 +330,12 @@ button:before{
     margin-top:20px;
 }
 
+#newList{
+    white-space:pre-wrap;
+    line-height:1.8;
+    margin-top:20px;
+}
+
 .admin textarea{
   width: 100%;
   height: 300px;
