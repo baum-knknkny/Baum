@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "baum-knknkny",
-  "main": "js/index.js",
+  "name": "baum-cms",
+  "main": "js/adminkny.js",
   "compatibility_date": "2026-06-29",
   "observability": {
     "enabled": true
