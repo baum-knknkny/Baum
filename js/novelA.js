@@ -287,41 +287,39 @@ async function loadLike(){
         data.count;
 }
 
-async function addLike(){
+async function addLike() {
 
-    const data =
-        await addCounter(
-            "like",
-            novelName,
-            currentStoryId
-        );
-    
-    
+    const data = await addCounter(
+        "like",
+        novelName,
+        currentStoryId
+    );
+
     document
         .getElementById("likeCount")
-        .textContent =
-        data.count;
-        
+        .textContent = data.count;
+
     document
-        .getElementById("likeButton")
-        .textContent = "thank you!"
-        
+        .getElementById("likeButtonText")
+        .textContent = "thank you!";
+
     document
         .querySelector('.heart-pop')
-        .src = "../../image/pinkhart.png"; 
-    
+        .src = "../../image/pinkhart.png";
 
     setTimeout(() => {
 
-    document
-        .getElementById("likeButton")
-        .textContent = "いいねを送る";
+        document
+            .getElementById("likeButtonText")
+            .textContent = "いいねを送る";
 
-    document
-        .querySelector('.heart-pop')
-        .src = "../../image/grayhart.png";
+        document
+            .querySelector('.heart-pop')
+            .src = "../../image/grayhart.png";
 
-},2000);}
+    }, 2000);
+}
+
 
 async function initStoryListA() {
 
