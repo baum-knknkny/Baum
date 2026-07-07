@@ -304,6 +304,7 @@ async function addLike(){
         .getElementById("likeCount")
         .textContent =
         data.count;
+
         
     document
         .getElementById("likeButton")
