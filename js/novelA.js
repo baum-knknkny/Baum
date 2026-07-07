@@ -311,9 +311,6 @@ async function addLike(){
 
     heart.src = "../../image/pinkhart.png";
 
-
-
-
     setTimeout(() => {
 
     document
