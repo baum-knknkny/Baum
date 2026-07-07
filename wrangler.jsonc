@@ -1,5 +1,5 @@
 {
   "name": "baum-cms",
-  "main": "js/adminkny.js",
+  "main": "baum-cms/worker.js",
   "compatibility_date": "2026-07-03"
 }
