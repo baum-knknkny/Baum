@@ -296,20 +296,20 @@ async function addLike(){
             currentStoryId
         );
     
-    const heart = 
-    document.querySelector('.heart-pop');
     
     document
         .getElementById("likeCount")
         .textContent =
         data.count;
-
         
     document
         .getElementById("likeButton")
         .textContent = "thank you!"
-
-    heart.src = "../../image/pinkhart.png";
+        
+    document
+        .querySelector('.heart-pop')
+        .src = "../../image/pinkhart.png"; 
+    
 
     setTimeout(() => {
 
@@ -317,7 +317,9 @@ async function addLike(){
         .getElementById("likeButton")
         .textContent = "いいねを送る";
 
-    heart.src = "../../image/grayhart.png";
+    document
+        .querySelector('.heart-pop')
+        .src = "../../image/grayhart.png";
 
 },2000);}
 
