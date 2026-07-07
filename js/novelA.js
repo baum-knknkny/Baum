@@ -295,9 +295,6 @@ async function addLike(){
             currentStoryId
         );
     
-    heart.classList.remove("heart-pop");
-    void heart.offsetWidth;
-    heart.classList.add("heart-pop");
 
     document
         .getElementById("likeCount")
