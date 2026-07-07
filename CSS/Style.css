@@ -370,6 +370,43 @@ button:before{
   color: #ffd482;  
 }
 
+#likeCount{
+  font-size: 1.2rem;
+  color:#888;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic", Meiryo, sans-serif;
+  margin-left: 0.5em;
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.35);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-pop {
+  animation: heartPop 0.35s ease;
+}
+
+#likeButton img {
+  width: 2vh;
+  height: 2vh;
+  margin-right: 0.5em;
+}
+
+
+
 @media (hover: hover){
   .content a{
     transition: 0.3s;
@@ -501,6 +538,7 @@ button:before{
   cursor: pointer;
 }
 
+
 @media (hover: hover){
   .contactform input[type="submit"]{
     transition: 0.1s;
@@ -517,6 +555,7 @@ button:before{
   background: #f9f9f9;
   box-shadow: none;
 }
+
 
 /* ==================================================
   拍手機能内ありがとう画面

@@ -294,6 +294,10 @@ async function addLike(){
             novelName,
             currentStoryId
         );
+    
+    heart.classList.remove("heart-pop");
+    void heart.offsetWidth;
+    heart.classList.add("heart-pop");
 
     document
         .getElementById("likeCount")
@@ -301,16 +305,22 @@ async function addLike(){
         data.count;
 
     document
+        .getElementById("likeButton")
+        .textContent = "thank you!";
+
+    Image
     .getElementById("likeButton")
-    .textContent =
-    "♥ 応援ありがとう！";
+    .src = "../../image/pinkhart.png";
 
     setTimeout(() => {
 
     document
         .getElementById("likeButton")
-        .textContent =
-        "♡ 応援する";
+        .textContent = "いいねを送る";
+
+    Image
+        .getElementById("likeButton")
+        .src = "../../image/grayhart.png";
 
 },1000);}
 
