@@ -294,10 +294,7 @@ async function addLike(){
             novelName,
             currentStoryId
         );
-
-    const heart = document
-        .getElementById("likeButton")
-        .querySelector("img");
+    
 
     document
         .getElementById("likeCount")
