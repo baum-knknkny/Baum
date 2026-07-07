@@ -295,6 +295,10 @@ async function addLike(){
             currentStoryId
         );
     
+    const heart =
+        document
+        .getElementById("likeButton")
+        .querySelector("img");
 
     document
         .getElementById("likeCount")
