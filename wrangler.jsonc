@@ -2,9 +2,12 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "baum-cms",
   "main": "js/adminkny.js",
-  "compatibility_date": "2026-06-29",
+  "compatibility_date": "2026-07-03",
   "observability": {
-    "enabled": true
+    "enabled": true,
+    "logs": {
+      "level": "info"
+    }
   },
   "assets": {
     "directory": "."
