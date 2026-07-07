@@ -300,7 +300,6 @@ async function addLike(){
         .getElementById("likeButton")
         .querySelector("img");
 
-        
     document
         .getElementById("likeCount")
         .textContent =
