@@ -298,9 +298,7 @@ async function addLike(){
     
     const heart = 
     document.querySelector('.heart-pop');
-      liked = !liked;
-      heart.src = liked ? '../../image/pinkhart.png' : '../../image/grayhart.png';
-
+    
     document
         .getElementById("likeCount")
         .textContent =
