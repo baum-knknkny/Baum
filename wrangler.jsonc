@@ -9,9 +9,6 @@
       "level": "info"
     }
   },
-  "assets": {
-    "directory": "."
-  },
   "compatibility_flags": [
     "nodejs_compat"
   ],
