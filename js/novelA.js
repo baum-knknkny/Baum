@@ -309,7 +309,7 @@ async function addLike(){
         .getElementById("likeButton")
         .textContent = "thank you!"
 
-    ImagePreload(heart, "../../image/pinkhart.png");
+    heart.src = "../../image/pinkhart.png";
 
 
 
