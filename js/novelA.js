@@ -310,7 +310,7 @@ async function addLike(){
         .textContent = "thank you!"
 
     heart.src = "../../image/pinkhart.png";
-
+    
     setTimeout(() => {
 
     document
