@@ -300,6 +300,7 @@ async function addLike(){
         .getElementById("likeButton")
         .querySelector("img");
 
+        
     document
         .getElementById("likeCount")
         .textContent =
@@ -310,7 +311,7 @@ async function addLike(){
         .textContent = "thank you!"
 
     heart.src = "../../image/pinkhart.png";
-    
+
     setTimeout(() => {
 
     document
