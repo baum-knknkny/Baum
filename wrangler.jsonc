@@ -1,24 +1,5 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "baum-cms",
   "main": "js/adminkny.js",
-  "compatibility_date": "2026-07-03",
-  "observability": {
-    "enabled": true,
-    "logs": {
-      "level": "info"
-    }
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "id": "354705d414394f9985326bbe6cbcbe42",
-      "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
-    }
-  ]
-  // wrangler.jsonc
-
+  "compatibility_date": "2026-07-03"
 }
