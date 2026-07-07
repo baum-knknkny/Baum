@@ -294,7 +294,10 @@ async function addLike(){
             novelName,
             currentStoryId
         );
-    
+
+    const heart = document
+        .getElementById("likeButton")
+        .querySelector("img");
 
     document
         .getElementById("likeCount")
@@ -303,11 +306,11 @@ async function addLike(){
 
     document
         .getElementById("likeButton")
-        .textContent = "thank you!";
+        .textContent = "thank you!"
+        heart.src = "../../image/pinkhart.png";
 
-    Image
-    .getElementById("likeButton")
-    .src = "../../image/pinkhart.png";
+
+
 
     setTimeout(() => {
 
@@ -315,9 +318,7 @@ async function addLike(){
         .getElementById("likeButton")
         .textContent = "いいねを送る";
 
-    Image
-        .getElementById("likeButton")
-        .src = "../../image/grayhart.png";
+    heart.src = "../../image/grayhart.png";
 
 },1000);}
 
