@@ -294,7 +294,6 @@ async function addLike(){
             novelName,
             currentStoryId
         );
-    
 
     document
         .getElementById("likeCount")
