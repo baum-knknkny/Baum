@@ -296,10 +296,10 @@ async function addLike(){
             currentStoryId
         );
     
-    const heart =
-        document
-        .getElementById("likeButton")
-        .querySelector("img");
+    const heart = 
+    document.querySelector('.heart-pop');
+      liked = !liked;
+      heart.src = liked ? '../../image/pinkhart.png' : '../../image/grayhart.png';
 
     document
         .getElementById("likeCount")
@@ -321,7 +321,7 @@ async function addLike(){
 
     heart.src = "../../image/grayhart.png";
 
-},1000);}
+},2000);}
 
 async function initStoryListA() {
 
