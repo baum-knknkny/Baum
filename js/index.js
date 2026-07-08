@@ -5,6 +5,7 @@ fetch(
     }
 );
 
+
 async function loadVisitor(){
 
     const data =
