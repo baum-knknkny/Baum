@@ -81,9 +81,6 @@ async function sendClapMessage() {
 
     const category = "拍手";
 
-    const message = "";
-
-
     await sendToDiscord({
 
         category,
@@ -93,11 +90,10 @@ async function sendClapMessage() {
         message
 
     });
-    sendToDiscord()
     
     }
 
-            async function sendToDiscord(data) {
+async function sendToDiscord(data) {
 
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
