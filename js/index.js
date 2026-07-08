@@ -1,3 +1,5 @@
+eruda.init();
+
 fetch(
     `${workerURL}?type=visitor`,
     {
