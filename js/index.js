@@ -78,6 +78,14 @@ window.onload = async () => {
 
 };
 
+document.getElementById("clapLink").addEventListener("click", async function(e) {
+    e.preventDefault();
+
+    await sendClapMessage();
+
+    location.href = this.href;
+});
+
 async function sendClapMessage() {
 
     const category = "拍手";
