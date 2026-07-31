@@ -184,29 +184,5 @@ function setStatus(message, type) {
   el.textContent = message;
   el.className = "status" + (type ? " " + type : "");
 }
-async function getNextId(gh, dirPath) {
-  const res = await fetch(
-    `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/${dirPath}?ref=${gh.branch}`,
-    { headers: gh.headers }
-  );
 
-  let next = 1;
-
-  if (res.ok) {
-    const files = await res.json();
-    const nums = files
-      .map(f => f.name.match(/^(\d{5})\.md$/))
-      .filter(Boolean)
-      .map(m => parseInt(m[1], 10));
-    if (nums.length) next = Math.max(...nums) + 1;
-  } else {
-    const errText = await res.text();
-    console.log(`getNextId status=${res.status} dirPath=${dirPath} body=${errText}`);
-    if (res.status !== 404) {
-      throw new Error(`ディレクトリ取得に失敗: ${dirPath} / ${errText}`);
-    }
-  }
-
-  return String(next).padStart(5, "0");
-}
 init();
