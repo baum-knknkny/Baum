@@ -28,6 +28,7 @@ function saveAFirstName() {
     );
 }
 
+
 function saveALastName() {
 
     const value =
@@ -286,41 +287,39 @@ async function loadLike(){
         data.count;
 }
 
-async function addLike(){
+async function addLike() {
 
-    const data =
-        await addCounter(
-            "like",
-            novelName,
-            currentStoryId
-        );
-    
-    const heart =
-        document
-        .getElementById("likeButton")
-        .querySelector("img");
+    const data = await addCounter(
+        "like",
+        novelName,
+        currentStoryId
+    );
 
     document
         .getElementById("likeCount")
-        .textContent =
-        data.count;
+        .textContent = data.count;
 
-        
     document
-        .getElementById("likeButton")
-        .textContent = "thank you!"
+        .getElementById("likeButtonText")
+        .textContent = "thank you!";
 
-    heart.src = "../../image/pinkhart.png";
+    document
+        .querySelector('.heart-pop')
+        .src = "../../image/pinkhart.png";
 
     setTimeout(() => {
 
-    document
-        .getElementById("likeButton")
-        .textContent = "いいねを送る";
+        document
+            .getElementById("likeButtonText")
+            .textContent = "いいねを送る";
 
-    heart.src = "../../image/grayhart.png";
+        document
+            .querySelector('.heart-pop')
+            .src = "../../image/grayhart.png";
 
-},1000);}
+    }, 2000);
+}
+
 
 async function initStoryListA() {
 

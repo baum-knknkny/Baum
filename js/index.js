@@ -1,9 +1,11 @@
+
 fetch(
     `${workerURL}?type=visitor`,
     {
         method:"POST"
     }
 );
+
 
 async function loadVisitor(){
 
@@ -76,12 +78,21 @@ window.onload = async () => {
 
 };
 
+document.getElementById("clapLink").addEventListener("click", async function(e) {
+    e.preventDefault();
+
+    await sendClapMessage();
+
+    location.href = this.href;
+});
+
 async function sendClapMessage() {
 
     const category = "拍手";
-
+    
+    const name = "";
+    
     const message = "";
-
 
     await sendToDiscord({
 
@@ -92,11 +103,10 @@ async function sendClapMessage() {
         message
 
     });
-    sendToDiscord()
     
     }
 
-            async function sendToDiscord(data) {
+async function sendToDiscord(data) {
 
     await fetch(
         "https://clap.hutuuneko-mukiryoku.workers.dev",
