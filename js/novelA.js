@@ -90,30 +90,17 @@ function generateStoryList() {
 
         let storyButtons = "";
 
-chapter.stories.forEach(story => {
+        chapter.stories.forEach(story => {
 
-    storyButtons += `
-        <div class="story-list-row">
-
-            <button
-                class="color-button"
-                onclick="openStory('${story.id}')"
-            >
-                ${story.title}
-            </button>
-
-            <span class="story-list-like">
-                <imgsrc = "../../image/pinkhart.png">
-                <span
-                    data-story-list-like="${story.id}"
+            storyButtons += `
+                <button class="color-button" 
+                    onclick="openStory('${story.id}')"
                 >
-                    0
-                </span>
-            </span>
-
-        </div>
-    `;
-});
+                    ${story.title}
+                </button>
+                <br>
+            `;
+        });
 
         container.innerHTML += `
             <button class="chapter"
