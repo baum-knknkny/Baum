@@ -19,11 +19,11 @@ async function generateRes() {
             parts[2];
         list.innerHTML +=
         `
-        <div class="updateBox">
+        <div class="resBox">
             <h3>${item.title}</h3>
             <hr>
             <p>${content}</p>
-            <div class="updateDate">
+            <div class="resDate">
                 ${item.date}
             </div>
         </div>
