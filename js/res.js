@@ -20,11 +20,11 @@ async function generateRes() {
         list.innerHTML +=
         `
         <div class="resBox">
-            <h3>${item.title}</h3>
+            <h3>${item.title}(${item.commentdate})</h3>
             <hr>
             <p>${content}</p>
             <div class="updateDate">
-                ${item.date}
+                ${item.resdate}
             </div>
         </div>
         `;
