@@ -54,6 +54,9 @@ async function addNovelLike() {
     const data = await addCounter("novel-like", novelName);
 
     document.getElementById("novelLikeCount").textContent = data.count;
+
+    await loadHomeTotal();   // ← 追加（合計も押した瞬間に更新）
+
     document.getElementById("novelLikeButtonText").textContent = "thank you!";
     document.querySelector(".home-heart").src = "../../image/pinkhart.png";
 
