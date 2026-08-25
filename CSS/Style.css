@@ -391,7 +391,7 @@ button:before{
   margin-right: 0.5em;
 }
 
-.heart-pop.story-heart {
+img .heart-pop.story-heart {
   width: 1.5vh;
   height: 1.5vh;
   margin-right: 0.5em;
