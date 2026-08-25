@@ -120,10 +120,10 @@ title: ${title}
 date: ${date}
 ---
 
-質問:
+コメント:
 ${question || "（本文のみ）"}
 
-回答:
+返信:
 ${answer}
 `;
 
