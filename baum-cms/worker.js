@@ -118,7 +118,7 @@ async function handleReply(request, env, cors) {
 `---
 title: ${title}
 commentdate: ${commentdate}
-resdate: ${date}
+resdate: ${resdate}
 ---
 
 コメント:
@@ -129,7 +129,7 @@ ${answer}
 `;
 
   await putFile(gh, filePath, md, `add: ${filePath}`);
-  await appendToJsonArray(gh, jsonPath, { id, title, date });
+  await appendToJsonArray(gh, jsonPath, { id, title, commentdate, resdate });
 
   return json({ ok: true, fileName, id }, 200, cors);
 }

@@ -4,7 +4,7 @@ const DRAFT_KEY = "adminDraft";
 const FIELDS_BY_TAB = {
   story: ["story-series", "story-chapter", "story-episode", "story-chapterName", "story-title", "story-summary", "story-body"],
   update: ["update-title", "update-date", "update-body"],
-  reply: ["reply-title", "reply-date", "reply-question", "reply-answer"]
+  reply: ["reply-title", "reply-commentdate", "reply-resdate", "reply-question", "reply-answer"]
 };
 
 let currentTab = "story";
