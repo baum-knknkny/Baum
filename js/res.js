@@ -23,7 +23,7 @@ async function generateRes() {
             <h3>${item.title}</h3>
             <hr>
             <p>${content}</p>
-            <div class="resDate">
+            <div class="updateDate">
                 ${item.date}
             </div>
         </div>
