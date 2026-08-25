@@ -53,7 +53,6 @@ async function addNovelLike() {
         document.querySelector(".home-heart").src = "../../image/grayhart.png";
     }, 2000);
 }
-
 function getAFirstName() {
     return localStorage.getItem("dreamAFirstName")
         || "アカリ";
@@ -240,7 +239,10 @@ async function openStory(id) {
         .style.display =
         "block";
 
-
+    await loadLike();
+    await loadTotalLikes();
+    updateStoryButtons();
+    
     window.scrollTo(0, 0);
     }
 
