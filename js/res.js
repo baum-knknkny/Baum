@@ -23,7 +23,7 @@ async function generateRes() {
             <h3>${item.title}(${item.commentdate})</h3>
             <hr>
             <p>${content}</p>
-            <div class="updateDate">
+            <div class="resDate">
                 ${item.resdate}
             </div>
         </div>

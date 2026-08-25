@@ -117,7 +117,8 @@ async function handleReply(request, env, cors) {
   const md =
 `---
 title: ${title}
-date: ${date}
+commentdate: ${commentdate}
+resdate: ${date}
 ---
 
 コメント:
