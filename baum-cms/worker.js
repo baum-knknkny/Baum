@@ -104,7 +104,7 @@ ${body}
 }
 
 async function handleReply(request, env, cors) {
-  const { title, date, question, answer } = await request.json();
+  const { title, commentdate, resdate, question, answer } = await request.json();
 
   const gh = githubContext(env);
   const dirPath = "content/res";
@@ -130,6 +130,7 @@ ${answer}
 
   await putFile(gh, filePath, md, `add: ${filePath}`);
   await appendToJsonArray(gh, jsonPath, { id, title, commentdate, resdate });
+  
 
   return json({ ok: true, fileName, id }, 200, cors);
 }

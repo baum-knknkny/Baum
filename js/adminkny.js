@@ -31,7 +31,7 @@ function init() {
   if (!document.getElementById("update-date").value) {
     const today = new Date().toISOString().slice(0, 10);
     document.getElementById("update-date").value = today;
-    document.getElementById("reply-date").value = today;
+    document.getElementById("reply-resdate").value = today;
   }
 }
 
