@@ -4,6 +4,15 @@ let storyListA = [];
 
 const novelName = "novel-a";
 
+async function loadHomeTotal() {
+
+    const data =
+        await getCounter("total", novelName);
+
+    document
+        .getElementById("novelTotalLikeCount")
+        .textContent = data.total;
+}
 async function loadLike(){
 
     const data =
@@ -242,7 +251,7 @@ async function openStory(id) {
     await loadLike();
     await loadTotalLikes();
     updateStoryButtons();
-    
+
     window.scrollTo(0, 0);
     }
 
@@ -397,6 +406,7 @@ async function initStoryListA() {
         generateStoryList();
 
         await loadNovelLike();   // ← 追加
+        await loadHomeTotal();   // ← 追加
 
     } catch (err) {
 
