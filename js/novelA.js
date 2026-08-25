@@ -4,6 +4,32 @@ let storyListA = [];
 
 const novelName = "novel-a";
 
+async function addNovelLike() {
+
+    const data = await addCounter(
+        "novel-like",
+        novelName
+    );
+
+    document
+        .getElementById("novelLikeCount")
+        .textContent = data.count;
+}
+
+async function loadNovelLike() {
+
+    const data =
+        await getCounter(
+            "novel-like",
+            novelName
+        );
+
+    document
+        .getElementById("novelLikeCount")
+        .textContent =
+        data.count;
+}
+
 function getAFirstName() {
     return localStorage.getItem("dreamAFirstName")
         || "アカリ";
@@ -190,9 +216,6 @@ async function openStory(id) {
         .style.display =
         "block";
 
-    await loadLike();
-
-    updateStoryButtons();
 
     window.scrollTo(0, 0);
     }
@@ -287,6 +310,20 @@ async function loadLike(){
         data.count;
 }
 
+async function loadTotalLikes() {
+
+    const data =
+        await getCounter(
+            "total",
+            novelName
+        );
+
+    document
+        .getElementById("totalLikeCount")
+        .textContent =
+        data.total;
+}
+
 async function addLike() {
 
     const data = await addCounter(
@@ -332,6 +369,8 @@ async function initStoryListA() {
             await response.json();
 
         generateStoryList();
+
+        await loadNovelLike();   // ← 追加
 
     } catch (err) {
 
