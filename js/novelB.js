@@ -3,6 +3,68 @@ let currentStoryId = "";
 let storyListB = [];
 
 const novelName = "novel-b";
+async function loadHomeTotal() {
+
+    const data =
+        await getCounter("total", novelName);
+
+    document
+        .getElementById("novelTotalLikeCount")
+        .textContent = data.total;
+}
+async function loadLike(){
+
+    const data =
+        await getCounter("like", novelName, currentStoryId);
+
+    document.getElementById("likeCount").textContent = data.count;
+}
+
+async function addLike() {
+
+    const data = await addCounter("like", novelName, currentStoryId);
+
+    document.getElementById("likeCount").textContent = data.count;
+    document.getElementById("likeButtonText").textContent = "thank you!";
+    document.querySelector(".story-heart").src = "../../image/pinkhart.png";
+
+    setTimeout(() => {
+        document.getElementById("likeButtonText").textContent = "いいねを送る";
+        document.querySelector(".story-heart").src = "../../image/grayhart.png";
+    }, 2000);
+}
+
+async function loadTotalLikes() {
+
+    const data = await getCounter("total", novelName);
+
+    document.getElementById("totalLikeCount").textContent = data.total;
+}
+
+async function loadNovelLike() {
+
+    const data = await getCounter("novel-like", novelName);
+
+    document.getElementById("novelLikeCount").textContent = data.count;
+}
+
+async function addNovelLike() {
+
+    const data = await addCounter("novel-like", novelName);
+
+    document.getElementById("novelLikeCount").textContent = data.count;
+
+    await loadHomeTotal();   // ← 追加（合計も押した瞬間に更新）
+
+    document.getElementById("novelLikeButtonText").textContent = "thank you!";
+    document.querySelector(".home-heart").src = "../../image/pinkhart.png";
+
+    setTimeout(() => {
+        document.getElementById("novelLikeButtonText").textContent = "この小説をいいね";
+        document.querySelector(".home-heart").src = "../../image/grayhart.png";
+    }, 2000);
+}
+
 
 function getBFirstName() {
     return localStorage.getItem("dreamBFirstName")
@@ -190,6 +252,7 @@ async function openStory(id) {
         "block";
 
     await loadLike();
+    await loadTotalLikes();
 
     updateStoryButtons();
 
@@ -327,6 +390,10 @@ async function initStoryListB() {
 
         storyListB =
             await response.json();
+            
+        await loadNovelLike();   // ← 追加
+        await loadHomeTotal();   // ← 追加
+        await loadTotalLikes();  // ← 追加
 
         generateStoryList();
 
