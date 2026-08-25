@@ -397,6 +397,12 @@ img .heart-pop.story-heart {
   margin-right: 0.5em;
 }
 
+img .heart-pop {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-right: 0.5em;
+}
+
 @media (hover: hover){
   .content a{
     transition: 0.3s;
