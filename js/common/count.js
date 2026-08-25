@@ -53,3 +53,5 @@ async function addCounter(type, novel = "", story = "") {
     return await response.json();
 
 }
+
+
