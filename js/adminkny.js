@@ -128,7 +128,8 @@ async function handleSave() {
   } else if (currentTab === "reply") {
     payload = {
       title: value("reply-title"),
-      date: value("reply-date"),
+      commentdate: value("reply-commentdate"),
+      resdate: value("reply-resdate"),
       question: value("reply-question"),
       answer: value("reply-answer")
     };
