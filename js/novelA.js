@@ -348,6 +348,39 @@ async function loadTotalLikes() {
         data.total;
 }
 
+async function addLike() {
+
+    const data = await addCounter(
+        "like",
+        novelName,
+        currentStoryId
+    );
+
+    document
+        .getElementById("likeCount")
+        .textContent = data.count;
+
+    document
+        .getElementById("likeButtonText")
+        .textContent = "thank you!";
+
+    document
+        .querySelector('.heart-pop')
+        .src = "../../image/pinkhart.png";
+
+    setTimeout(() => {
+
+        document
+            .getElementById("likeButtonText")
+            .textContent = "いいねを送る";
+
+        document
+            .querySelector('.heart-pop')
+            .src = "../../image/grayhart.png";
+
+    }, 2000);
+}
+
 
 async function initStoryListA() {
 
