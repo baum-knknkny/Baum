@@ -391,7 +391,11 @@ button:before{
   margin-right: 0.5em;
 }
 
-
+#likeButton img .heart-pop.story-heart {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-right: 0.5em;
+}
 
 @media (hover: hover){
   .content a{
