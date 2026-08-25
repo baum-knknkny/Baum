@@ -391,11 +391,12 @@ async function initStoryListB() {
         storyListB =
             await response.json();
             
-        await loadNovelLike();   // ← 追加
-        await loadHomeTotal();   // ← 追加
-        await loadTotalLikes();  // ← 追加
 
         generateStoryList();
+
+        await loadNovelLike();   // ← 追加
+        await loadHomeTotal();   // ← 追加
+
 
     } catch (err) {
 
