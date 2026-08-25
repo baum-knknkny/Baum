@@ -403,6 +403,13 @@ img .heart-pop {
   margin-right: 0.5em;
 }
 
+#sans {
+  font-size: 0.8rem;
+  color:#888;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic", Meiryo, sans-serif;
+  margin-left: 1em;
+}
+
 @media (hover: hover){
   .content a{
     transition: 0.3s;
