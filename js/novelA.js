@@ -4,30 +4,54 @@ let storyListA = [];
 
 const novelName = "novel-a";
 
-async function addNovelLike() {
+async function loadLike(){
 
-    const data = await addCounter(
-        "novel-like",
-        novelName
-    );
+    const data =
+        await getCounter("like", novelName, currentStoryId);
 
-    document
-        .getElementById("novelLikeCount")
-        .textContent = data.count;
+    document.getElementById("likeCount").textContent = data.count;
+}
+
+async function addLike() {
+
+    const data = await addCounter("like", novelName, currentStoryId);
+
+    document.getElementById("likeCount").textContent = data.count;
+    document.getElementById("likeButtonText").textContent = "thank you!";
+    document.querySelector(".story-heart").src = "../../image/pinkhart.png";
+
+    setTimeout(() => {
+        document.getElementById("likeButtonText").textContent = "いいねを送る";
+        document.querySelector(".story-heart").src = "../../image/grayhart.png";
+    }, 2000);
+}
+
+async function loadTotalLikes() {
+
+    const data = await getCounter("total", novelName);
+
+    document.getElementById("totalLikeCount").textContent = data.total;
 }
 
 async function loadNovelLike() {
 
-    const data =
-        await getCounter(
-            "novel-like",
-            novelName
-        );
+    const data = await getCounter("novel-like", novelName);
 
-    document
-        .getElementById("novelLikeCount")
-        .textContent =
-        data.count;
+    document.getElementById("novelLikeCount").textContent = data.count;
+}
+
+async function addNovelLike() {
+
+    const data = await addCounter("novel-like", novelName);
+
+    document.getElementById("novelLikeCount").textContent = data.count;
+    document.getElementById("novelLikeButtonText").textContent = "thank you!";
+    document.querySelector(".home-heart").src = "../../image/pinkhart.png";
+
+    setTimeout(() => {
+        document.getElementById("novelLikeButtonText").textContent = "この小説をいいね";
+        document.querySelector(".home-heart").src = "../../image/grayhart.png";
+    }, 2000);
 }
 
 function getAFirstName() {
@@ -322,39 +346,6 @@ async function loadTotalLikes() {
         .getElementById("totalLikeCount")
         .textContent =
         data.total;
-}
-
-async function addLike() {
-
-    const data = await addCounter(
-        "like",
-        novelName,
-        currentStoryId
-    );
-
-    document
-        .getElementById("likeCount")
-        .textContent = data.count;
-
-    document
-        .getElementById("likeButtonText")
-        .textContent = "thank you!";
-
-    document
-        .querySelector('.heart-pop')
-        .src = "../../image/pinkhart.png";
-
-    setTimeout(() => {
-
-        document
-            .getElementById("likeButtonText")
-            .textContent = "いいねを送る";
-
-        document
-            .querySelector('.heart-pop')
-            .src = "../../image/grayhart.png";
-
-    }, 2000);
 }
 
 

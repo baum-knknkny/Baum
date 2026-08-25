@@ -25,15 +25,11 @@
 
 <div id="home">
 
-  <h2>叶うなら　<button id="likeButton" onclick="addNovelLike()">
-    <img class="heart-pop" src="../../image/grayhart.png" alt="Like">
-    <span id="likeButtonText">この小説をいいね</span>
-</button>
-
-
-    <span id="likeCount">
-        0
-    </span></h2>
+ <h2>叶うなら　<button id="novelLikeButton" onclick="addNovelLike()">
+    <img class="heart-pop home-heart" src="../../image/grayhart.png" alt="Like">
+    <span id="novelLikeButtonText">この小説をいいね</span>
+  </button>
+  <span id="novelLikeCount">0</span></h2>
 
 <p>
 ナマエ　：
@@ -50,7 +46,6 @@
         <div id="storyListA"></div>
 
     </div>
-    
 
     <div id="storyPage" style="display:none;">
 
@@ -59,23 +54,23 @@
         </button>
 <br><br>
 
-        <h3 id="storyTitle" ></h3>
-        <div id="novel"></div>
-<br><br>
-    <div class="center">
-      <div class="like-area">
+  <h3 id="storyTitle"></h3>
+  <div id="novel"></div>
+  <br><br>
 
-       <button id="likeButton" onclick="addLike()">
-    <img class="heart-pop" src="../../image/grayhart.png" alt="Like">
-    <span id="likeButtonText">いいねを送る</span>
-</button>
+  <div class="center">
+    <div class="like-area">
 
+      <button id="likeButton" onclick="addLike()">
+        <img class="heart-pop story-heart" src="../../image/grayhart.png" alt="Like">
+        <span id="likeButtonText">いいねを送る</span>
+      </button>
+      <span id="likeCount">0</span>
 
-    <span id="likeCount">
-        0
-    </span>
+      <br>
+      合計いいね：<span id="totalLikeCount">0</span>
+    </div>
 
-</div>
       <br>
       
       <button
