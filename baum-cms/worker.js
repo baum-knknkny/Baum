@@ -7,6 +7,7 @@ const ALLOWED_ORIGINS = [
 const SERIES_JSON_PATH = {
   "novel-a": "js/content/storyA.json",
   "novel-b": "js/content/storyB.json",
+  "novel-c": "js/content/storyC.json",
   "short": "js/content/storyShort.json"
 };
 
