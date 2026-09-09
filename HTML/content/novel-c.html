@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'pfb8ksp',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<link rel="stylesheet" href="../../CSS/Style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE互換モード対策 -->
+<title>叶うなら</title>
+	<link rel="icon" href="../../image/top.png" type="image/x-icon">
+
+</head>
+<body>
+<div class="box2">
+
+
+<div id="home">
+<span class="novel-block" data-novel="novel-c">
+<h2>羽ばたく鳥は太陽へ</h2>
+        <span id="sans"><button id="novelLikeButton" onclick="addNovelLike()">
+    <img class="heart-pop home-heart" src="../../image/grayhart.png" alt="Like">
+    <span id="novelLikeButtonText">この小説をいいね</span>
+  </button>
+  <span id="novelLikeCount">0</span>　　　total：<span id="novelTotalLikeCount" type="total">0</span></span>
+</span>
+<p>
+ナマエ　：
+<input id="CFirstNameInput" value="ディヤ">
+<button onclick="saveCFirstName()">保存</button>
+</p>
+
+
+
+        <div id="storyListC"></div>
+
+    </div>
+
+    <div id="storyPage" style="display:none;">
+
+        <button onclick="backToList()">
+            ← 一覧へ戻る
+        </button>
+<br><br>
+
+  <h3 id="storyTitle"></h3>
+  <div id="novel"></div>
+  <br><br>
+
+  <div class="center">
+    <div class="like-area">
+
+      <button id="likeButton" onclick="addLike()">
+        <img class="heart-pop story-heart" src="../../image/grayhart.png" alt="Like">
+        <span id="likeButtonText">いいねを送る</span>
+      </button>
+      <span id="likeCount">0</span>
+
+      <br>
+    </div>
+
+      <br>
+      
+      <button
+        id="prevButton"
+        onclick="openPrevStory()">
+        ←
+    </button>
+    
+
+        <button onclick="backToList()">
+            目次
+        </button>
+        <button
+        id="nextButton"
+        onclick="openNextStory()">
+        →
+    </button></div>
+        <div class="story-nav">
+
+
+</div>
+    </div>
+    <script src="../../js/common/count.js"></script>
+    <script src="../../js/novelC.js"></script>
+
+</div>
+
+<footer><p><a href="../main.html">back to main</a></p>
+  <p><a href="../../index.html">top</a></p></footer>
+
+</body>
+</html>
