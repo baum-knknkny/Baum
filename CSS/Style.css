@@ -25,22 +25,15 @@ text-align: center;
 font-size: 15px;
 color: #888;
 background: #FFFFFF;
-background: linear-gradient(to bottom, #F0FFFF,#F0FFF0); /* 上から下へのグラデーション */
+background: linear-gradient(to bottom, #f6f5ee,#d8e7e7); /* 上から下へのグラデーション */
 margin: 0;
 }
-/*backgroundの#add6ffと#FFBAC3を入れ替えると、上部ピンク下部ブルーのグラデーションになります*/
-
 
 h1 {
 font-family: "Josefin Sans", "M PLUS 1p", sans-serif;                               
 font-size: 3.5em;
 font-weight: normal;
 color: #888; 
-text-shadow:
-    3px  3px 0 #fff, /* 右下方向への影 */
-   -3px  3px 0 #fff, /* 左下方向への影 */
-    3px -3px 0 #fff, /* 右上方向への影 */
-   -3px -3px 0 #fff; /* 左上方向への影 */
 }
 
 
@@ -73,10 +66,11 @@ a:visited {
 }
 
 nav {
-margin: 1em auto;  
+margin: 2%;
 }
 
 ul {
+  margin: 2%;
   list-style: none;
 }
 
@@ -94,6 +88,19 @@ footer {
   margin: 0;
   padding: 0;
 }
+
+.komorebi {
+  background: #fffef4;
+  margin: 2% 30%;
+  padding: 2%;
+}
+
+.rank {
+  background: #fffef4;
+  padding: 2%;
+  margin: 2% 30%;
+}
+
 .center {
 text-align: center;
 }
@@ -104,16 +111,30 @@ margin: 80px auto 200px;
 position: relative;
 margin:  auto ;
 }
+
 .title {
-position: absolute;
+    background: #fffef4;
+
+margin: 100px auto 100px;
 top: 50%;
 left: 50%;
-transform: translate(-50%,-50%);
 }
 
 .top{
 	margin: 0 auto 200px;
 	position: relative;
+}
+
+.backimg{
+  position: fixed;
+  top: -10%;
+  margin: 0 0 0 -70%;
+  }
+
+.backimg img{
+  width: 70%;
+  height: auto;
+  opacity: 0.1;
 }
 
 .wrap{
@@ -124,15 +145,25 @@ transform: translate(-50%,-50%);
 
 .box{
     position: relative;
-    background: #F3F0EC;
-    box-shadow: 0px 0px 0px 5px #F3F0EC;
-    margin: 5%;
-    color: #454545;
+    background: #778888;
+    box-shadow: 0px 0px 0px 5px #778888;
+    margin: 5% 0;
+    color: #f6f5ee;
+}
+
+.box h2{
+  font-family: "Josefin Sans", "M PLUS 1p", sans-serif;
+  font-weight: 3rem;
+  font-style: normal;
+  padding: 2%;
+  font-size: 3rem;
+  font-variation-settings: "wght" 250;
+  color: #f6f5ee;
 }
 .box2{
     position: relative;
     background: #fff;
-    box-shadow: 0px 0px 0px 5px #F3F0EC;
+    box-shadow: 0px 0px 0px 5px #fcf6ef;
     margin: 8%;
     color: #454545;
 	text-align: left;
