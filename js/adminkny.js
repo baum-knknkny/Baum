@@ -103,7 +103,7 @@ async function handleSave() {
 
   let endpoint, payload, validation;
 
-  if (currentTab === "story") {
+    if (currentTab === "story") {
     payload = {
       series: value("story-series"),
       chapter: Number(value("story-chapter")),
@@ -111,7 +111,7 @@ async function handleSave() {
       episode: Number(value("story-episode")),
       title: value("story-title"),
       summary: value("story-summary"),
-      body: value("story-body")
+      body: bodyValue("story-body")          // ← 変更
     };
     endpoint = "/story";
     validation = payload.chapterName && payload.title && payload.body;
@@ -120,7 +120,7 @@ async function handleSave() {
     payload = {
       title: value("update-title"),
       date: value("update-date"),
-      body: value("update-body")
+      body: bodyValue("update-body")         // ← 変更
     };
     endpoint = "/update";
     validation = payload.title && payload.date && payload.body;
@@ -128,10 +128,9 @@ async function handleSave() {
   } else if (currentTab === "reply") {
     payload = {
       title: value("reply-title"),
-      commentdate: value("reply-commentdate"),
-      resdate: value("reply-resdate"),
-      question: value("reply-question"),
-      answer: value("reply-answer")
+      date: value("reply-date"),
+      question: bodyValue("reply-question"), // ← 変更
+      answer: bodyValue("reply-answer")      // ← 変更
     };
     endpoint = "/reply";
     validation = payload.title && payload.answer;
@@ -178,6 +177,15 @@ async function handleSave() {
 
 function value(id) {
   return document.getElementById(id).value.trim();
+}
+
+// 本文用: 先頭の全角スペース(字下げ)を残し、先頭の空行と末尾の空白だけ除去
+function bodyValue(id) {
+  return document
+    .getElementById(id)
+    .value
+    .replace(/^(\r?\n)+/, "")
+    .trimEnd();
 }
 
 function setStatus(message, type) {
